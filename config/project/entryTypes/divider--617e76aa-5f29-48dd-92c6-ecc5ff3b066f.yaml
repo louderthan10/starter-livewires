@@ -1,0 +1,51 @@
+color: yellow
+fieldLayouts:
+  d65010b0-d284-44f4-acf7-de06d0a62c3e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-08-20T09:04:11+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: c6e3e7b9-889c-453a-8196-4857efc0a323
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 2b320c0c-cb2c-4d18-8c0e-baaafa29a8e8
+        userCondition: null
+handle: divider
+hasTitleField: false
+icon: horizontal-rule
+name: Divider
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

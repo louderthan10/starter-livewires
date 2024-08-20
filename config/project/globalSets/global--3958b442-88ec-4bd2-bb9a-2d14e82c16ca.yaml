@@ -1,0 +1,28 @@
+fieldLayouts:
+  1e01db65-cfdb-4cc5-94c0-f80ac60c7f24:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-08-20T09:02:19+00:00'
+            elementCondition: null
+            fieldUid: 6d2e5577-5ded-43c9-96e2-d4fc4c770fe9 # Text
+            handle: siteName
+            includeInCards: false
+            instructions: null
+            label: 'Site name'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c3dfca58-7b99-4cc5-98b6-59c904843cd6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Settings
+        uid: 91f3a448-2b7c-4aeb-8422-b1ab15d2fd09
+        userCondition: null
+handle: global
+name: Global
+sortOrder: 1

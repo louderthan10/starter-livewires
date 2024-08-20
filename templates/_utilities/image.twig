@@ -1,0 +1,35 @@
+{% macro pictures(photos) %}
+
+{% for photo in photos %}
+  {% set classes = photo.classes.eagerly().all() ?? null %}
+  {% for class in classes %}
+    {% set classes = classes ~ class.title ~ ' ' %}
+  {% endfor %}
+  {% if photo.websiteUrl %}<a href="{{ photo.websiteUrl }}"{% if classes %}class="{{ classes }}"{% endif %}>{% endif %}
+  {% set outputWidths = [640, 1024, 1920] %}
+  {% set srcset = [] %}
+  {% for outputWidth in outputWidths %}
+    {% if outputWidth <= photo.width %}
+      {% set srcset = srcset | merge([photo.url({ width: outputWidth }) ~ ' ' ~ outputWidth ~ 'w']) %}
+    {% endif %}
+  {% endfor %}
+  <picture class="c1">
+    <source 
+      data-sizes="100vw"
+      type="image/webp" />
+    <img class="lazyload"
+      src="{{ photo.url }}"
+      srcset="{{ srcset | join(', ') }}"
+      alt="{{ photo.title }}" 
+      sizes="100vw"
+      loading="lazy"
+      class="aspect-ratio-wide" />
+  </picture>
+  {% if photo.websiteUrl %}</a>{% endif %}
+  {% if photo.text %}
+    <figcaption>
+      {{ photo.text }}
+    </figcaption>
+  {% endif %}
+{% endfor %}
+{% endmacro %}

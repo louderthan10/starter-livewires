@@ -1,0 +1,10 @@
+{% extends "_layouts/default" %}
+{% block content %}
+  <section class="page {{ entry.slug }}">
+    <section class="page__content">
+      {% block landing %}
+        {{ entry.pageContent.eagerly().render() }}
+      {% endblock %}
+    </section>
+  </section>
+{% endblock %}

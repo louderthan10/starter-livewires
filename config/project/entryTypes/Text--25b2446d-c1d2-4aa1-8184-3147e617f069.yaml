@@ -38,7 +38,7 @@ fieldLayouts:
           -
             dateAdded: '2024-08-20T09:04:25+00:00'
             elementCondition: null
-            fieldUid: 9d42aa56-4a66-4d0b-b8a9-84a4cb387788 # Rich text
+            fieldUid: 9d42aa56-4a66-4d0b-b8a9-84a4cb387788 # Text block
             handle: null
             includeInCards: false
             instructions: null
@@ -54,10 +54,10 @@ fieldLayouts:
         name: Content
         uid: ea21cde6-ed6d-4134-b16c-97380c9cfb97
         userCondition: null
-handle: richText
+handle: Text
 hasTitleField: false
 icon: receipt
-name: 'Rich text'
+name: Text
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null

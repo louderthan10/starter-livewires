@@ -22,6 +22,6 @@ siteSettings:
   58ccb571-6c72-449f-8e7b-6f43c5d416b3: # Starter starter
     enabledByDefault: true
     hasUrls: true
-    template: _landing.twig
+    template: pages/contact.twig
     uriFormat: contact
 type: single

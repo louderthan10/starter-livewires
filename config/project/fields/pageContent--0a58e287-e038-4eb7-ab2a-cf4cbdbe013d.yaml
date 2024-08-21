@@ -7,7 +7,7 @@ settings:
   createButtonLabel: 'New block'
   entryTypes:
     - a9b06c99-7bb5-41d8-9d3e-17f64e9fa16a # Page section
-    - 25b2446d-c1d2-4aa1-8184-3147e617f069 # Rich text
+    - 25b2446d-c1d2-4aa1-8184-3147e617f069 # Text
     - 5358db38-27c0-49b4-b9d3-e68326e79da2 # Image
     - a06e695e-af7f-4a1b-84a7-575ec935e293 # Video
     - 617e76aa-5f29-48dd-92c6-ecc5ff3b066f # Divider

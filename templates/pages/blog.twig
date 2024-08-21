@@ -1,0 +1,15 @@
+{% extends "pages/default" %}
+
+{% block landing %}
+  {{ entry.pageContent.eagerly().render() }}
+
+  {% set articles = craft.entries.section('article').all() %}
+  {% for article in articles %}
+  {% set heading = article.pageHeading ?? article.title %}
+  <article>
+    <h2><a href="{{ article.url }}">{{ heading }}</a><h2>
+    <p>{{ article.pageSubheading }}</p>
+    <p><time datetime="{{ article.postDate|atom }}">{{ article.postDate|date }}</time></p>
+  </article>
+  {% endfor %}
+{% endblock %}

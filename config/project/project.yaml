@@ -1,4 +1,4 @@
-dateModified: 1724146999
+dateModified: 1724221007
 email:
   fromEmail: travis@pixelandtonic.com
   fromName: 'Starter starter'
@@ -17,6 +17,8 @@ fs:
 meta:
   __names__:
     0a58e287-e038-4eb7-ab2a-cf4cbdbe013d: 'Page content' # Page content
+    2b829e15-a7bd-4ab0-9050-dcdfe44499cf: 'Public Schema' # Public Schema
+    2bae9725-9546-4f55-a889-56102191aa89: Navigation # Navigation
     6ba54824-1c3f-454f-8830-f6cea379bee4: Article # Article
     6c9778b8-507c-4108-937d-6ceeabf35047: Image # Image
     6d0d3aa4-84be-441d-8fcc-2ab2d6db2503: 'Starter starter' # Starter starter
@@ -24,26 +26,26 @@ meta:
     7b9364bd-2215-495a-8b0b-2280df887a8b: Assets # Assets
     7dac7ab3-08a0-4af8-ba7c-cbecd0726f08: Simple # Simple
     9d082133-4710-4468-ab39-80db8c9fcf59: Code # Code
-    9d42aa56-4a66-4d0b-b8a9-84a4cb387788: 'Rich text' # Rich text
+    9d42aa56-4a66-4d0b-b8a9-84a4cb387788: 'Text block' # Text block
     21cbc498-9952-4e47-9e33-b1c1a0d4078d: Contact # Contact
-    25b2446d-c1d2-4aa1-8184-3147e617f069: 'Rich text' # Rich text
+    25b2446d-c1d2-4aa1-8184-3147e617f069: Text # Text
     58ccb571-6c72-449f-8e7b-6f43c5d416b3: 'Starter starter' # Starter starter
+    163c895f-0c05-4845-80e2-043b2346d830: Address # Address
     617e76aa-5f29-48dd-92c6-ecc5ff3b066f: Divider # Divider
     697da4c2-e02f-4f49-9d76-e22609ceda25: Page # Page
-    03112e69-ce8e-4295-a191-82201c9e882a: Articles # Articles
-    3958b442-88ec-4bd2-bb9a-2d14e82c16ca: Global # Global
+    03112e69-ce8e-4295-a191-82201c9e882a: Blog # Blog
     5358db38-27c0-49b4-b9d3-e68326e79da2: Image # Image
     0922209d-2911-419e-82cf-b05113a35f6e: Wide # Wide
     a06e695e-af7f-4a1b-84a7-575ec935e293: Video # Video
     a9b06c99-7bb5-41d8-9d3e-17f64e9fa16a: 'Page section' # Page section
+    b1b93579-e9e1-44de-9199-f7c9c50c51ef: 'Page link' # Page link
     b5b7bfc5-a39e-4d1a-89be-51f0afeb5ce0: Avatar # Avatar
     b579b454-12bd-4710-a436-c26907141957: Full # Full
+    bd99645a-4524-40e4-83dc-c6b12e023bab: _Globals # _Globals
+    bf39d39a-dde9-4997-9eac-6ca35dd0ca4d: Category # Category
     cdad2202-5d55-49ba-995e-962503f5887f: Home # Home
-plugins:
-  ckeditor:
-    edition: standard
-    enabled: true
-    schemaVersion: 3.0.0.0
+    d4f0917b-edcf-4ef0-a98b-661ff27384ad: Page # Page
+    d55d172f-8b8f-4bb7-b680-31249981c350: Global # Global
 system:
   edition: solo
   live: true

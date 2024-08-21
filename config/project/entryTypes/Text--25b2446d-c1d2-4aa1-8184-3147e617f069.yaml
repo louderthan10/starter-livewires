@@ -54,7 +54,7 @@ fieldLayouts:
         name: Content
         uid: ea21cde6-ed6d-4134-b16c-97380c9cfb97
         userCondition: null
-handle: Text
+handle: text
 hasTitleField: false
 icon: receipt
 name: Text

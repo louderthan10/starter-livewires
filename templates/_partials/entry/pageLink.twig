@@ -1,3 +1,2 @@
 {% set page = entry.page.one() %}
-{% set label = entry.title ?? page.title %}
-<a href="{{ page.url }}" class="p-1">{{ label }}</a>
+<a href="{{ page.url }}" class="p-1">{{ entry.title }}</a>

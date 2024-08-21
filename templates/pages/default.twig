@@ -7,8 +7,7 @@
     {{ entry.pageSubheading|md }}
   </header>
   <section class="page__content">
-    {% block landing %}
-      {{ entry.pageContent.eagerly().render() }}
-    {% endblock %}
+    {{ entry.pageContent.eagerly().render() }}
+    {% block landing %}{% endblock %}
   </section>
 {% endblock %}

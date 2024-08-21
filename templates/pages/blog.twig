@@ -1,15 +1,15 @@
 {% extends "pages/default" %}
 
 {% block landing %}
-  {{ entry.pageContent.eagerly().render() }}
-
+  <section class="container mx-auto">
   {% set articles = craft.entries.section('article').all() %}
   {% for article in articles %}
-  {% set heading = article.pageHeading ?? article.title %}
-  <article>
-    <h2><a href="{{ article.url }}">{{ heading }}</a><h2>
-    <p>{{ article.pageSubheading }}</p>
-    <p><time datetime="{{ article.postDate|atom }}">{{ article.postDate|date }}</time></p>
-  </article>
+    {% set heading = article.pageHeading ?? article.title %}
+    <article>
+      <h2><a href="{{ article.url }}">{{ heading }}</a><h2>
+      <p>{{ article.pageSubheading }}</p>
+      <p><time datetime="{{ article.postDate|atom }}">{{ article.postDate|date }}</time></p>
+    </article>
   {% endfor %}
+  </section>
 {% endblock %}

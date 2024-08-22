@@ -1,0 +1,15 @@
+{% macro data(data) %}
+{% set name = data.name ?? "field" ~ random(1, 100) %}
+{% set type = data.type ?? "text" %}
+{% set label = data.label ?? "" %}
+{% set value = data.value ?? "" %}
+
+<div class="field mb-4">
+  <label class="block" for="{{ name }}">{{ label }}</label>
+  {% if type == "textarea" %}
+    <textarea name={{ name }} class="form-input px-4 py-3 rounded">{{ value }}</textarea>
+  {% else %}
+    <input type="{{ type }}" name={{ name }} value="{{ value }}" class="form-input px-4 py-3 rounded" />
+  {% endif %}
+</div>
+{% endmacro %}

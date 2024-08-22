@@ -23,13 +23,21 @@
   <header class="navigation py-6  bg-slate-50">
     <div class="sm:flex justify-between container mx-auto">
       <div class="logo sm:tw-basis-1/3 font-bold p-1">
-        <a href="/" class="text-red-500">{{ siteName }}</a>
+        {% include '_partials/logo' %}
       </div>
       <nav class="sm:tw-basis-2/3 grow-1">
         {{ global.navigation.eagerly().render() }}
       </nav>
     </div>
   </header>
+  {% set flashes = craft.app.session.getAllFlashes(true) %}
+  {% if flashes|length %}
+    <div class="bg-red-500 text-slate-50">
+    {% for level, flash in flashes %}
+      <p class="{{ level }} container mx-auto p-2 text-md">{{ flash }}</p>
+    {% endfor %}
+    </div>
+  {% endif %}
   <main class="page {{ entry.slug }}" id="main">
     {% block content %}{% endblock %}
   </main>

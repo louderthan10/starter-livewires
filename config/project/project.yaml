@@ -1,4 +1,4 @@
-dateModified: 1724222443
+dateModified: 1724306342
 email:
   fromEmail: travis@pixelandtonic.com
   fromName: 'Starter starter'
@@ -43,19 +43,14 @@ meta:
     b579b454-12bd-4710-a436-c26907141957: Full # Full
     bd99645a-4524-40e4-83dc-c6b12e023bab: _Globals # _Globals
     bf39d39a-dde9-4997-9eac-6ca35dd0ca4d: Category # Category
+    c55ca0a9-4bd6-409b-afd8-c1884dafecd0: Team # Team
     cdad2202-5d55-49ba-995e-962503f5887f: Home # Home
     d4f0917b-edcf-4ef0-a98b-661ff27384ad: Page # Page
     d55d172f-8b8f-4bb7-b680-31249981c350: Global # Global
+    ddb1aa4d-507d-4fab-8f1b-cb4a1d6b7e23: 'Sign in' # Sign in
 system:
   edition: solo
   live: true
   name: 'Starter starter'
   schemaVersion: 5.3.0.2
   timeZone: America/Los_Angeles
-users:
-  allowPublicRegistration: false
-  defaultGroup: null
-  photoSubpath: null
-  photoVolumeUid: null
-  require2fa: false
-  requireEmailVerification: true

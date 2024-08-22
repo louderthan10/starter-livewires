@@ -1,0 +1,31 @@
+{% import '_utilities/field' as field %}
+
+{% extends "pages/default" %}
+
+{% block landing %}
+  {% if currentUser %}
+    <section class="container mx-auto mb-9">
+      <p><a href="{{ logoutUrl }}">Sign out</a></p>
+    </section>
+  {% else %}
+    <section class="container mx-auto bg-slate-200 p-6 mb-9 rounded">
+      <h2 class="font-bold text-3xl mb-4">Sign in</h2>
+      <form method="post" accept-charset="UTF-8">
+        {{ csrfInput() }}
+        {{ actionInput('users/login') }}
+        {{ field.data({
+          label: "Username or email",
+          name: "loginName",
+          type: "text"
+        }) }}
+        {{ field.data({
+          label: "Password",
+          name: "password",
+          type: "password"
+        }) }}
+        
+        <input type="submit" class="rounded bg-red-500 px-6 py-4" value="Sign in" />
+      </form>
+    </section>
+  {% endif %}
+{% endblock %}

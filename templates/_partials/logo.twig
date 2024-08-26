@@ -1,9 +1,10 @@
 {% import '_utilities/image' as img %}
-  <a href="/" class="text-red-500 blockf">
-    {% if global.logo|length %}
-      {% set logo = global.logo.eagerly().one() %}
-      {{ svg(logo) }}
-    {% else %}
-      {{ siteName }}
-    {% endif %}
-  </a>
+
+<a href="/" class="text-red-500 {% if global.logo|length %}block w-12 h-12{% endif %}">
+  {% if global.logo|length %}
+    {% set logo = global.logo.eagerly().all() %}
+    {{ img.pictures(logo) }}
+  {% else %}
+    {{ siteName }}
+  {% endif %}
+</a>

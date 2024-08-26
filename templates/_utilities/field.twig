@@ -8,9 +8,9 @@
 <div class="field mb-4">
   <label class="block" for="{{ name }}">{{ label }}</label>
   {% if type == "textarea" %}
-    <textarea name={{ name }} class="form-input px-4 py-3 rounded" id="{{ id }}">{{ value }}</textarea>
+    <textarea name={{ name }} class="form-input px-4 py-3 rounded w-full" id="{{ id }}">{{ value }}</textarea>
   {% else %}
-    <input type="{{ type }}" name={{ name }} value="{{ value }}" class="form-input px-4 py-3 rounded" id="{{ id }}" />
+    <input type="{{ type }}" name={{ name }} value="{{ value }}" class="form-input px-4 py-3 rounded w-full" id="{{ id }}" />
   {% endif %}
 </div>
 {% endmacro %}

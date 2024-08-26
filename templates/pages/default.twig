@@ -2,9 +2,12 @@
 {% set heading = entry.pageHeading ?? entry.title %}
 
 {% block content %}
-  <header class="container mx-auto py-6 px-1 text-lg">
-    <h1 class="font-bold text-6xl lg:text-9xl">{{ heading }}</hl>
+  <header class="container mx-auto py-6 px-1 text-2xl">
+    <h1 class="font-bold text-6xl lg:text-9xl">{{ heading }}</h1>
     {{ entry.pageSubheading|md }}
+    {% if entry.author %}
+      <p class="text-xs">By {{ entry.author }}</p>
+    {% endif %}
   </header>
   <section class="page__content">
     {{ entry.pageContent.eagerly().render() }}

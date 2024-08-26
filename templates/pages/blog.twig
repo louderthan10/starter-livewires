@@ -1,14 +1,16 @@
 {% extends "pages/default" %}
 
 {% block landing %}
-  <section class="container mx-auto">
+  <section class="container mx-auto mb-6 divide-y divide-slate-300">
   {% set articles = craft.entries.section('article').all() %}
   {% for article in articles %}
     {% set heading = article.pageHeading ?? article.title %}
-    <article>
-      <h2><a href="{{ article.url }}">{{ heading }}</a><h2>
+    <article class="py-6">
+      <h2 class="text-4xl font-bold"><a href="{{ article.url }}">{{ heading }}</a></h2>
       <p>{{ article.pageSubheading }}</p>
-      <p><time datetime="{{ article.postDate|atom }}">{{ article.postDate|date }}</time></p>
+      <p>
+        <time class="text-xs" datetime="{{ article.postDate|atom }}">{{ article.postDate|date }}</time>
+      </p>
     </article>
   {% endfor %}
   </section>

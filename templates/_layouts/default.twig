@@ -41,8 +41,9 @@
   <main class="page {{ entry.slug }}" id="main">
     {% block content %}{% endblock %}
   </main>
-  <footer class="bg-slate-50 py-6  px-1">
+  <footer class="bg-slate-50 py-6 text-xs px-1">
     <div class="container mx-auto">
+      <p class="font-bold">{{ siteName }}</p>
       {{ global.address.one()|address }}
     </div>
   </footer>

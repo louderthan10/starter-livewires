@@ -7,7 +7,9 @@
       {% for update in updates %}
         <article class="text-lg py-6">
           {{ update.textBlock|md }}
-          <p class="text-xs"><time>{{ update.postDate|datetime }}</time></p>
+          <p class="text-xs">
+            <time datetime="{{ update.postDate|atom }}">{{ update.postDate|datetime }}</time>
+          </p>
         </article>
       {% endfor %}
     </section>

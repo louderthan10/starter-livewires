@@ -2,9 +2,9 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   - 697da4c2-e02f-4f49-9d76-e22609ceda25 # Page
-handle: contact
+handle: updates
 maxAuthors: 1
-name: Contact
+name: Updates
 previewTargets:
   -
     __assoc__:
@@ -22,6 +22,6 @@ siteSettings:
   58ccb571-6c72-449f-8e7b-6f43c5d416b3: # Starter starter
     enabledByDefault: true
     hasUrls: true
-    template: pages/contact.twig
-    uriFormat: contact
+    template: pages/updates.twig
+    uriFormat: updates
 type: single

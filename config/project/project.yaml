@@ -1,4 +1,4 @@
-dateModified: 1724306342
+dateModified: 1724645909
 email:
   fromEmail: travis@pixelandtonic.com
   fromName: 'Starter starter'
@@ -19,15 +19,16 @@ meta:
     0a58e287-e038-4eb7-ab2a-cf4cbdbe013d: 'Page content' # Page content
     2b829e15-a7bd-4ab0-9050-dcdfe44499cf: 'Public Schema' # Public Schema
     2bae9725-9546-4f55-a889-56102191aa89: Navigation # Navigation
+    3e2a1a6f-88ea-477b-936d-39393f2d594f: Update # Update
     6ba54824-1c3f-454f-8830-f6cea379bee4: Article # Article
     6c9778b8-507c-4108-937d-6ceeabf35047: Image # Image
     6d0d3aa4-84be-441d-8fcc-2ab2d6db2503: 'Starter starter' # Starter starter
     6d2e5577-5ded-43c9-96e2-d4fc4c770fe9: Text # Text
     7b9364bd-2215-495a-8b0b-2280df887a8b: Assets # Assets
+    7d283c09-39e3-45c3-8e37-a09f1ea68ace: Updates # Updates
     7dac7ab3-08a0-4af8-ba7c-cbecd0726f08: Simple # Simple
     9d082133-4710-4468-ab39-80db8c9fcf59: Code # Code
     9d42aa56-4a66-4d0b-b8a9-84a4cb387788: 'Text block' # Text block
-    21cbc498-9952-4e47-9e33-b1c1a0d4078d: Contact # Contact
     25b2446d-c1d2-4aa1-8184-3147e617f069: Text # Text
     58ccb571-6c72-449f-8e7b-6f43c5d416b3: 'Starter starter' # Starter starter
     163c895f-0c05-4845-80e2-043b2346d830: Address # Address

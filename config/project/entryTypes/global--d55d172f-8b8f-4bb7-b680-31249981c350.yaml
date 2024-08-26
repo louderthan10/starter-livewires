@@ -67,12 +67,6 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: Header
-        uid: e59c6a9e-e2c2-4738-88f5-61ee419cf02e
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
           -
             dateAdded: '2024-08-21T03:11:22+00:00'
             elementCondition: null
@@ -89,8 +83,8 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-        name: Footer
-        uid: 224f31ec-ede2-4c2f-b87d-1391f7c0757f
+        name: Header
+        uid: e59c6a9e-e2c2-4738-88f5-61ee419cf02e
         userCondition: null
 handle: global
 hasTitleField: true

@@ -62,6 +62,6 @@ showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: 'Update {id}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

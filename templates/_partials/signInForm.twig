@@ -1,0 +1,22 @@
+{% import '_utilities/field' as field %}
+
+<form method="post" accept-charset="UTF-8">
+  {{ csrfInput() }}
+  {{ actionInput('users/login') }}
+  {{ redirectInput('/updates') }}
+  {{ successMessageInput('Signed in successfully') }}
+  {{ failMessageInput('Error signing in') }}
+  {{ field.data({
+    label: "Username or email",
+    name: "loginName",
+    type: "text",
+    id: "loginName"
+  }) }}
+  {{ field.data({
+    label: "Password",
+    name: "password",
+    type: "password",
+    id: "password"
+  }) }}
+  <input type="submit" class="rounded bg-red-500 px-6 py-4" value="Sign in" />
+</form>

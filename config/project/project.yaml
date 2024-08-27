@@ -1,4 +1,4 @@
-dateModified: 1724736920
+dateModified: 1724743215
 elementSources:
   craft\elements\Entry:
     -
@@ -90,6 +90,7 @@ meta:
     2b829e15-a7bd-4ab0-9050-dcdfe44499cf: 'Public Schema' # Public Schema
     2bae9725-9546-4f55-a889-56102191aa89: Navigation # Navigation
     3e2a1a6f-88ea-477b-936d-39393f2d594f: Updates # Updates
+    5dd08fc8-3ea4-4582-952f-4c0f7ebf409e: Category # Category
     6ba54824-1c3f-454f-8830-f6cea379bee4: Article # Article
     6c9778b8-507c-4108-937d-6ceeabf35047: Image # Image
     6d0d3aa4-84be-441d-8fcc-2ab2d6db2503: 'Starter starter' # Starter starter
@@ -100,6 +101,7 @@ meta:
     9d42aa56-4a66-4d0b-b8a9-84a4cb387788: 'Text block' # Text block
     25b2446d-c1d2-4aa1-8184-3147e617f069: Text # Text
     58ccb571-6c72-449f-8e7b-6f43c5d416b3: 'Starter starter' # Starter starter
+    70b2614b-639a-4de2-8c11-3851d36d6f8c: 'Blog categories' # Blog categories
     163c895f-0c05-4845-80e2-043b2346d830: Address # Address
     617e76aa-5f29-48dd-92c6-ecc5ff3b066f: Divider # Divider
     697da4c2-e02f-4f49-9d76-e22609ceda25: Page # Page
@@ -111,12 +113,12 @@ meta:
     b5b7bfc5-a39e-4d1a-89be-51f0afeb5ce0: Avatar # Avatar
     b579b454-12bd-4710-a436-c26907141957: Full # Full
     bd99645a-4524-40e4-83dc-c6b12e023bab: Globals # Globals
-    bf39d39a-dde9-4997-9eac-6ca35dd0ca4d: Category # Category
     c4b4f50d-7d62-4a4c-bbf8-7aae00fd82c7: Pages # Pages
     c55ca0a9-4bd6-409b-afd8-c1884dafecd0: Team # Team
     cdad2202-5d55-49ba-995e-962503f5887f: Home # Home
     d4f0917b-edcf-4ef0-a98b-661ff27384ad: Page # Page
     d55d172f-8b8f-4bb7-b680-31249981c350: Global # Global
+    d390347a-09cf-4b70-a3b4-bc3cca520623: Category # Category
 system:
   edition: solo
   live: true

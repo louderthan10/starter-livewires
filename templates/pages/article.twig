@@ -1,6 +1,12 @@
 {% extends "pages/default" %}
+{% import '_utilities/teaser' as article %}
 
 {% block landing %}
   <section class="container mx-auto">
+    <h2>Other articles</h2>
+    {% set articles = craft.entries.section('artice').id('not ' ~ entry.id).limit(3).all() %}
+    {% for article in articles %}
+      {{ article.teaser(article) }}
+    {% endfor %}
   </section>
 {% endblock %}

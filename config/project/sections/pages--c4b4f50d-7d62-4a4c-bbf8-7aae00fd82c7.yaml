@@ -2,9 +2,9 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   - 697da4c2-e02f-4f49-9d76-e22609ceda25 # Page
-handle: updates
+handle: pages
 maxAuthors: 1
-name: Updates
+name: Pages
 previewTargets:
   -
     __assoc__:
@@ -22,6 +22,9 @@ siteSettings:
   58ccb571-6c72-449f-8e7b-6f43c5d416b3: # Starter starter
     enabledByDefault: true
     hasUrls: true
-    template: pages/updates.twig
-    uriFormat: updates
-type: single
+    template: _pages.twig
+    uriFormat: '{slug}'
+structure:
+  maxLevels: null
+  uid: 97fc32ea-6e86-45dd-b3dd-97cdc4360518
+type: structure

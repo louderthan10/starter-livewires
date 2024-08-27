@@ -22,6 +22,6 @@ siteSettings:
   58ccb571-6c72-449f-8e7b-6f43c5d416b3: # Starter starter
     enabledByDefault: true
     hasUrls: true
-    template: pages/article.twig
+    template: _pages.twig
     uriFormat: 'article/{slug}'
 type: channel

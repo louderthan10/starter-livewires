@@ -52,22 +52,6 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2024-08-21T05:26:12+00:00'
-            elementCondition: null
-            fieldUid: 2bae9725-9546-4f55-a889-56102191aa89 # Navigation
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 260bae0e-9072-4211-bcb2-2e691f9da045
-            userCondition: null
-            warning: null
-            width: 100
-          -
             dateAdded: '2024-08-21T03:11:22+00:00'
             elementCondition: null
             fieldUid: 163c895f-0c05-4845-80e2-043b2346d830 # Address

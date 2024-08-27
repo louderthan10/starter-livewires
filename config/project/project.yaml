@@ -1,4 +1,74 @@
-dateModified: 1724645909
+dateModified: 1724736920
+elementSources:
+  craft\elements\Entry:
+    -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\SlugConditionRule
+            operator: '='
+            uid: d81e0ca8-0443-4c79-a338-14e2c1fc8687
+            value: global
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - title
+        - asc
+      key: 'custom:6d0e2f9b-417a-4d0c-b23f-affe43c388c0'
+      label: Globals
+      tableAttributes: '-'
+      type: custom
+    -
+      heading: Pages
+      type: heading
+    -
+      key: 'section:c4b4f50d-7d62-4a4c-bbf8-7aae00fd82c7' # Pages
+      type: native
+    -
+      heading: Channels
+      type: heading
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:6ba54824-1c3f-454f-8830-f6cea379bee4' # Article
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - link
+      type: native
+    -
+      key: 'section:3e2a1a6f-88ea-477b-936d-39393f2d594f' # Updates
+      type: native
+    -
+      heading: Everything
+      type: heading
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: true
+      key: singles
+      tableAttributes:
+        - status
+        - link
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - status
+        - section
+        - postDate
+        - expiryDate
+        - link
+      type: native
 email:
   fromEmail: travis@pixelandtonic.com
   fromName: 'Starter starter'
@@ -19,13 +89,12 @@ meta:
     0a58e287-e038-4eb7-ab2a-cf4cbdbe013d: 'Page content' # Page content
     2b829e15-a7bd-4ab0-9050-dcdfe44499cf: 'Public Schema' # Public Schema
     2bae9725-9546-4f55-a889-56102191aa89: Navigation # Navigation
-    3e2a1a6f-88ea-477b-936d-39393f2d594f: Update # Update
+    3e2a1a6f-88ea-477b-936d-39393f2d594f: Updates # Updates
     6ba54824-1c3f-454f-8830-f6cea379bee4: Article # Article
     6c9778b8-507c-4108-937d-6ceeabf35047: Image # Image
     6d0d3aa4-84be-441d-8fcc-2ab2d6db2503: 'Starter starter' # Starter starter
     6d2e5577-5ded-43c9-96e2-d4fc4c770fe9: Text # Text
     7b9364bd-2215-495a-8b0b-2280df887a8b: Assets # Assets
-    7d283c09-39e3-45c3-8e37-a09f1ea68ace: Updates # Updates
     7dac7ab3-08a0-4af8-ba7c-cbecd0726f08: Simple # Simple
     9d082133-4710-4468-ab39-80db8c9fcf59: Code # Code
     9d42aa56-4a66-4d0b-b8a9-84a4cb387788: 'Text block' # Text block
@@ -34,7 +103,6 @@ meta:
     163c895f-0c05-4845-80e2-043b2346d830: Address # Address
     617e76aa-5f29-48dd-92c6-ecc5ff3b066f: Divider # Divider
     697da4c2-e02f-4f49-9d76-e22609ceda25: Page # Page
-    03112e69-ce8e-4295-a191-82201c9e882a: Blog # Blog
     5358db38-27c0-49b4-b9d3-e68326e79da2: Image # Image
     0922209d-2911-419e-82cf-b05113a35f6e: Wide # Wide
     a06e695e-af7f-4a1b-84a7-575ec935e293: Video # Video
@@ -42,13 +110,13 @@ meta:
     b1b93579-e9e1-44de-9199-f7c9c50c51ef: 'Page link' # Page link
     b5b7bfc5-a39e-4d1a-89be-51f0afeb5ce0: Avatar # Avatar
     b579b454-12bd-4710-a436-c26907141957: Full # Full
-    bd99645a-4524-40e4-83dc-c6b12e023bab: _Globals # _Globals
+    bd99645a-4524-40e4-83dc-c6b12e023bab: Globals # Globals
     bf39d39a-dde9-4997-9eac-6ca35dd0ca4d: Category # Category
+    c4b4f50d-7d62-4a4c-bbf8-7aae00fd82c7: Pages # Pages
     c55ca0a9-4bd6-409b-afd8-c1884dafecd0: Team # Team
     cdad2202-5d55-49ba-995e-962503f5887f: Home # Home
     d4f0917b-edcf-4ef0-a98b-661ff27384ad: Page # Page
     d55d172f-8b8f-4bb7-b680-31249981c350: Global # Global
-    ddb1aa4d-507d-4fab-8f1b-cb4a1d6b7e23: 'Sign in' # Sign in
 system:
   edition: solo
   live: true

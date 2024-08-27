@@ -1,0 +1,10 @@
+{% macro teaser(data) %}
+  {% set heading = data.pageHeading ?? data.title %}
+  <article class="py-6">
+    <h2 class="text-4xl font-bold"><a href="{{ data.url }}" class="text-red-500 hover:undeline focus:underline cursor-pointer">{{ heading }}</a></h2>
+    <p>{{ data.pageSubheading }}</p>
+    <p>
+      <time class="text-xs" datetime="{{ data.postDate|atom }}">{{ data.postDate|date }}</time>
+    </p>
+  </article>
+{% endmacro %}

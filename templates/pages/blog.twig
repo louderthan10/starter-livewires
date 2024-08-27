@@ -1,17 +1,15 @@
 {% extends "pages/default" %}
+{% import '_utilities/teaser' as article %}
 
 {% block landing %}
   <section class="container mx-auto mb-6 divide-y divide-slate-300">
-  {% set articles = craft.entries.section('article').all() %}
-  {% for article in articles %}
-    {% set heading = article.pageHeading ?? article.title %}
-    <article class="py-6">
-      <h2 class="text-4xl font-bold"><a href="{{ article.url }}">{{ heading }}</a></h2>
-      <p>{{ article.pageSubheading }}</p>
-      <p>
-        <time class="text-xs" datetime="{{ article.postDate|atom }}">{{ article.postDate|date }}</time>
-      </p>
-    </article>
-  {% endfor %}
+    {% set articleQuery = craft.entries.section('article').limit(3) %}
+    {% paginate articleQuery as pageInfo, articles %}
+
+    {% for article in articles %}
+      {{ article.teaser(article) }}
+    {% endfor %}
+
+    {% include '_partials/pagination' with { pageInfo: pageInfo } %}
   </section>
 {% endblock %}

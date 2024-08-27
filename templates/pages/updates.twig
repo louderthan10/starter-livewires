@@ -4,7 +4,10 @@
   <div class="container mx-auto sm:grid gap-6 grid-cols-2">
     <section class="mb-6 divide-y divide-slate-300">
       {% set updateQuery = craft.entries.section('updates').limit(3).orderBy('postDate DESC') %}
+
       {% paginate updateQuery as pageInfo, updates %}
+
+      {% set updateSection = updates[0].sectionId %}
 
       {% for update in updates %}
         <article class="text-lg py-6">
@@ -22,7 +25,7 @@
       <div class="bg-slate-200 p-6 mb-9 rounded">
         <h2 class="font-bold text-3xl mb-4">Post an update</h2>
         {% if currentUser %}
-          {% include "_partials/updateForm" %}
+          {% include "_partials/updateForm" with { id: updateSection } %}
         {% else %}
           <p>You need to be signed in to post an update</p>
           {% include "_partials/signInForm" %}

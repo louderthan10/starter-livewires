@@ -1,18 +1,14 @@
-{% import '_utilities/field' as field %}
-
 <form method="post">
   {{ csrfInput() }}
   {{ actionInput('entries/save-entry') }}
   {{ successMessageInput('Update posted') }}
   {{ failMessageInput('Something went wrong.') }}
   {{ redirectInput('/updates') }}
-  {{ hiddenInput('sectionId', 8) }}
-
-  {{ field.data({
-    label: "Message",
-    name: "fields[textBlock]",
-    type: "textarea",
-    id: "message"
-  }) }}
+  {{ hiddenInput('sectionId', id) }}
+  
+  <div class="mb-6">
+    <label for="message">Message</label>
+    <textarea name="fields[textBlock]" class="w-full px-6 py-4" id="message"></textarea>
+  </div>
   <input type="submit" class="rounded bg-red-500 px-6 py-4" value="Update" />
 </form>

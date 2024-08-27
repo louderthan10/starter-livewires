@@ -1,4 +1,4 @@
-dateModified: 1724743215
+dateModified: 1724743301
 elementSources:
   craft\elements\Entry:
     -
@@ -41,6 +41,9 @@ elementSources:
         - link
       type: native
     -
+      key: 'section:70b2614b-639a-4de2-8c11-3851d36d6f8c' # Blog categories
+      type: native
+    -
       key: 'section:3e2a1a6f-88ea-477b-936d-39393f2d594f' # Updates
       type: native
     -
@@ -69,6 +72,9 @@ elementSources:
         - expiryDate
         - link
       type: native
+    -
+      heading: ''
+      type: heading
 email:
   fromEmail: travis@pixelandtonic.com
   fromName: 'Starter starter'

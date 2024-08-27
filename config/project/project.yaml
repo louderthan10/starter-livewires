@@ -1,4 +1,4 @@
-dateModified: 1724743301
+dateModified: 1724767090
 elementSources:
   craft\elements\Entry:
     -
@@ -98,6 +98,7 @@ meta:
     3e2a1a6f-88ea-477b-936d-39393f2d594f: Updates # Updates
     5dd08fc8-3ea4-4582-952f-4c0f7ebf409e: Category # Category
     6ba54824-1c3f-454f-8830-f6cea379bee4: Article # Article
+    6c819fc7-3f73-4873-8f0c-5ea322fef1f9: 'Divider type' # Divider type
     6c9778b8-507c-4108-937d-6ceeabf35047: Image # Image
     6d0d3aa4-84be-441d-8fcc-2ab2d6db2503: 'Starter starter' # Starter starter
     6d2e5577-5ded-43c9-96e2-d4fc4c770fe9: Text # Text

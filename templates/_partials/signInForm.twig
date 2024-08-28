@@ -1,5 +1,5 @@
 <form method="post" accept-charset="UTF-8">
-  {{ csrfInput() }}
+  {{ csrfInput({ async: true }) }}
   {{ actionInput('users/login') }}
   {{ redirectInput('/updates') }}
   {{ successMessageInput('Signed in successfully') }}

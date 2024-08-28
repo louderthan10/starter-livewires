@@ -1,4 +1,4 @@
-dateModified: 1724767090
+dateModified: 1724820214
 elementSources:
   craft\elements\Entry:
     -
@@ -23,7 +23,37 @@ elementSources:
       heading: Pages
       type: heading
     -
+      condition:
+        class: craft\elements\conditions\entries\EntryCondition
+        conditionRules:
+          -
+            class: craft\elements\conditions\entries\SectionConditionRule
+            operator: in
+            uid: 5690305a-9541-42b2-9e20-e0f68d6f7e30
+            values:
+              - 998bf681-e007-4f7e-a525-863e01a38560 # Blog
+              - aef20f9c-5c84-4c50-8a18-acf0452db62f # Guestbook
+              - cdad2202-5d55-49ba-995e-962503f5887f # Home
+        elementType: craft\elements\Entry
+        fieldContext: global
+      defaultSort:
+        - title
+        - asc
+      key: 'custom:bef75f27-face-4b86-af9e-61d96538bfed'
+      label: 'Default pages'
+      tableAttributes: '-'
+      type: custom
+    -
+      defaultSort:
+        - structure
+        - asc
+      disabled: false
       key: 'section:c4b4f50d-7d62-4a4c-bbf8-7aae00fd82c7' # Pages
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - link
       type: native
     -
       heading: Channels
@@ -44,7 +74,16 @@ elementSources:
       key: 'section:70b2614b-639a-4de2-8c11-3851d36d6f8c' # Blog categories
       type: native
     -
-      key: 'section:3e2a1a6f-88ea-477b-936d-39393f2d594f' # Updates
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: 'section:3e2a1a6f-88ea-477b-936d-39393f2d594f' # Posts
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - link
       type: native
     -
       heading: Everything
@@ -95,7 +134,7 @@ meta:
     0a58e287-e038-4eb7-ab2a-cf4cbdbe013d: 'Page content' # Page content
     2b829e15-a7bd-4ab0-9050-dcdfe44499cf: 'Public Schema' # Public Schema
     2bae9725-9546-4f55-a889-56102191aa89: Navigation # Navigation
-    3e2a1a6f-88ea-477b-936d-39393f2d594f: Updates # Updates
+    3e2a1a6f-88ea-477b-936d-39393f2d594f: Posts # Posts
     5dd08fc8-3ea4-4582-952f-4c0f7ebf409e: Category # Category
     6ba54824-1c3f-454f-8830-f6cea379bee4: Article # Article
     6c819fc7-3f73-4873-8f0c-5ea322fef1f9: 'Divider type' # Divider type
@@ -112,10 +151,12 @@ meta:
     163c895f-0c05-4845-80e2-043b2346d830: Address # Address
     617e76aa-5f29-48dd-92c6-ecc5ff3b066f: Divider # Divider
     697da4c2-e02f-4f49-9d76-e22609ceda25: Page # Page
+    998bf681-e007-4f7e-a525-863e01a38560: Blog # Blog
     5358db38-27c0-49b4-b9d3-e68326e79da2: Image # Image
     0922209d-2911-419e-82cf-b05113a35f6e: Wide # Wide
     a06e695e-af7f-4a1b-84a7-575ec935e293: Video # Video
     a9b06c99-7bb5-41d8-9d3e-17f64e9fa16a: 'Page section' # Page section
+    aef20f9c-5c84-4c50-8a18-acf0452db62f: Guestbook # Guestbook
     b1b93579-e9e1-44de-9199-f7c9c50c51ef: 'Page link' # Page link
     b5b7bfc5-a39e-4d1a-89be-51f0afeb5ce0: Avatar # Avatar
     b579b454-12bd-4710-a436-c26907141957: Full # Full
@@ -126,6 +167,12 @@ meta:
     d4f0917b-edcf-4ef0-a98b-661ff27384ad: Page # Page
     d55d172f-8b8f-4bb7-b680-31249981c350: Global # Global
     d390347a-09cf-4b70-a3b4-bc3cca520623: Category # Category
+    f7576aa3-c155-4b54-82c9-8cb8c93495c9: Callout # Callout
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
 system:
   edition: solo
   live: true

@@ -7,7 +7,8 @@ settings:
   allowSelfRelations: false
   allowSubfolders: true
   allowUploads: true
-  allowedKinds: null
+  allowedKinds:
+    - image
   branchLimit: null
   defaultUploadLocationSource: 'volume:7b9364bd-2215-495a-8b0b-2280df887a8b' # Assets
   defaultUploadLocationSubpath: null
@@ -15,14 +16,14 @@ settings:
   maxRelations: null
   minRelations: null
   previewMode: full
-  restrictFiles: false
+  restrictFiles: true
   restrictLocation: true
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:7b9364bd-2215-495a-8b0b-2280df887a8b' # Assets
   restrictedLocationSubpath: null
   selectionLabel: null
   showCardsInGrid: false
-  showSiteMenu: false
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources: '*'

@@ -1,0 +1,37 @@
+{% extends "pages/default" %}
+
+{% block landing %}
+  <div class="container mx-auto sm:grid gap-6 grid-cols-2">
+    <section class="mb-6 divide-y divide-slate-300">
+      {% set postQuery = craft.entries.section('posts').limit(3).orderBy('postDate DESC') %}
+
+      {% paginate postQuery as pageInfo, posts %}
+
+      {% set postSection = posts[0].sectionId %}
+
+      {% for post in posts %}
+        <article class="text-lg py-6">
+          {{ post.textBlock|md }}
+          <p class="text-xs mt-1">
+            <time datetime="{{ post.postDate|atom }}">{{ post.postDate|datetime }}</time><br />
+            By {{ post.author.fullName }}
+          </p>
+        </article>
+      {% endfor %}
+
+      {% include '_partials/pagination' with { pageInfo: pageInfo } %}
+    </section>
+    
+    <section class="">
+      <div class="bg-slate-200 p-6 mb-9 rounded">
+        <h2 class="font-bold text-3xl mb-4">Post an entry</h2>
+        {% if currentUser %}
+          {% include "_partials/postForm" with { id: postSection } %}
+        {% else %}
+          <p>You need to be signed in to post an entry in the guestbook.</p>
+          {% include "_partials/signInForm" %}
+      {% endif %}
+      </div>
+    </section> 
+  </div>
+{% endblock %}

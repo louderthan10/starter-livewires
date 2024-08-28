@@ -36,38 +36,6 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2024-08-20T09:36:26+00:00'
-            elementCondition: null
-            fieldUid: 6c9778b8-507c-4108-937d-6ceeabf35047 # Image
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: 'Hero image'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: afc63364-6f55-4d6f-99e4-b6bae3ba3f57
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2024-08-20T09:36:26+00:00'
-            elementCondition: null
-            fieldUid: 6d2e5577-5ded-43c9-96e2-d4fc4c770fe9 # Text
-            handle: pageHeading
-            includeInCards: false
-            instructions: null
-            label: 'Page heading'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 38827e8e-7293-47ac-a3ff-14c61c3ce83a
-            userCondition: null
-            warning: null
-            width: 100
-          -
             dateAdded: '2024-08-21T04:29:15+00:00'
             elementCondition: null
             fieldUid: 6d2e5577-5ded-43c9-96e2-d4fc4c770fe9 # Text
@@ -80,6 +48,22 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 225541d2-66a5-4775-958a-af5304fa9875
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-08-20T09:36:26+00:00'
+            elementCondition: null
+            fieldUid: 6c9778b8-507c-4108-937d-6ceeabf35047 # Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Hero image'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: afc63364-6f55-4d6f-99e4-b6bae3ba3f57
             userCondition: null
             warning: null
             width: 100

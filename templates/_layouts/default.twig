@@ -27,6 +27,8 @@
       </div>
       {% set pages = craft.entries.section('pages') %}
       <nav class="sm:tw-basis-2/3 grow-1">
+        <a href="/blog" class="p-1">Blog</a>
+        <a href="/Guestbook" class="p-1">Guestbook</a>
         {% for page in pages %}
           <a href="{{ page.url }}" class="p-1">{{ page.title }}</a>
         {% endfor %}

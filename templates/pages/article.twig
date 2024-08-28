@@ -2,11 +2,13 @@
 {% import '_utilities/teaser' as article %}
 
 {% block landing %}
-  <section class="container mx-auto">
-    <h2>Other articles</h2>
-    {% set articles = craft.entries.section('artice').id('not ' ~ entry.id).limit(3).all() %}
-    {% for article in articles %}
-      {{ article.teaser(article) }}
-    {% endfor %}
+  <section class="bg-slate-100">
+    <div class="container mx-auto divide-y divide-slate-300 py-12">
+      <h2 class="font-bold text-4xl mb-2">Other articles</h2>
+      {% set articles = craft.entries.section('article').id('not ' ~ entry.id).limit(3).all() %}
+      {% for article in articles %}
+        {{ article.teaser(article) }}
+      {% endfor %}    
+    </div>
   </section>
 {% endblock %}

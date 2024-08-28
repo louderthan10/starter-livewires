@@ -55,13 +55,13 @@ fieldLayouts:
         uid: ea21cde6-ed6d-4134-b16c-97380c9cfb97
         userCondition: null
 handle: text
-hasTitleField: false
+hasTitleField: true
 icon: receipt
 name: Text
 showSlugField: false
 showStatusField: false
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: 'Update {id}'
+titleFormat: 'Post {now}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

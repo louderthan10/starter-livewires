@@ -11,23 +11,18 @@
         {% set srcset = srcset | merge([photo.url({ width: outputWidth }) ~ ' ' ~ outputWidth ~ 'w']) %}
       {% endif %}
     {% endfor %}
-    <picture class="c1">
+    <picture>
       <source 
         data-sizes="100vw"
         type="image/webp" />
       <img class="lazyload"
         src="{{ photo.url }}"
         srcset="{{ srcset | join(', ') }}"
-        alt="{{ photo.title }}" 
+        {% if photo.alt %}alt="{{ photo.alt }}"{% endif %}
         sizes="100vw"
         loading="lazy"
         class="aspect-ratio-wide" />
     </picture>
-    {% if photo.text %}
-      <figcaption>
-        {{ photo.text }}
-      </figcaption>
-    {% endif %}
   {% endif %}
 {% endfor %}
 {% endmacro %}

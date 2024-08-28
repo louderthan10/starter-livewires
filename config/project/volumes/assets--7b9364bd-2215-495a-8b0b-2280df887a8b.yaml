@@ -53,7 +53,7 @@ fieldLayouts:
             providesThumbs: false
             readonly: false
             requirable: true
-            required: false
+            required: true
             rows: null
             tip: null
             title: null

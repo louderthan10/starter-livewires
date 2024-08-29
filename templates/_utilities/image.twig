@@ -1,4 +1,4 @@
-{% macro pictures(photos) %}
+{% macro pictures(photos, decorative = false) %}
 
   {% for photo in photos %}
     {% if photo.extension == 'svg' %}
@@ -19,7 +19,7 @@
         <img class="lazyload"
           src="{{ photo.url }}"
           srcset="{{ srcset | join(', ') }}"
-          {% if photo.alt %}alt="{{ photo.alt }}"{% endif %}
+          {% if decorative %}alt=""{% elseif photo.alt %}alt="{{ photo.alt }}"{% endif %}
           sizes="100vw"
           loading="lazy"
           class="aspect-ratio-wide" />

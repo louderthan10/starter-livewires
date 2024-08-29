@@ -1,3 +1,4 @@
+{% if pageInfo.getPrevUrl() or pageInfo.getNextUrl() %}
 <nav class="pt-6 text-sm" role="navigation" aria-label="Entry pagination">
   {% set prevLinkSummary = "#{pageInfo.currentPage - 1} of #{pageInfo.totalPages}" %}
   {% set nextLinkSummary = "#{pageInfo.currentPage + 1} of #{pageInfo.totalPages}" %}
@@ -10,3 +11,4 @@
   {% endif %}
   </ul>
 </nav>
+{% endif %}

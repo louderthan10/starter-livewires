@@ -1,11 +1,17 @@
 {% extends "pages/default" %}
+{% set postQuery = craft.entries.section('posts').limit(3).orderBy('postDate DESC') %}
+{% paginate postQuery as pageInfo, posts %}
+
+{% block title %}
+  {% if pageInfo.getPrevUrl() or pageInfo.getNextUrl() %}
+  , Page {{ pageInfo.currentPage }} of {{ pageInfo.totalPages }}
+  {% endif %}
+{% endblock %}
 
 {% block landing %}
   <div class="container mx-auto sm:grid gap-6 grid-cols-2">
     <section class="mb-12">
-      {% set postQuery = craft.entries.section('posts').limit(3).orderBy('postDate DESC') %}
 
-      {% paginate postQuery as pageInfo, posts %}
 
       {% set postSection = posts[0].sectionId %}
       <ol class="mb-2 divide-y divide-slate-300">

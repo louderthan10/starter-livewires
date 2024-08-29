@@ -2,8 +2,9 @@
 
   {% for photo in photos %}
     {% if photo.extension == 'svg' %}
-      <span class="sr-only">{{ photo.alt }}</span>
-      {{ svg(photo) }}
+      {% set alt = decorative ? null : (photo.alt ?? null) %}
+      {% set role = decorative ? null : 'img' %}
+      {{ svg(photo)|attr({ role: role, 'aria-label': alt }) }}
     {% else %}
       {% set outputWidths = [640, 1024, 1920] %}
       {% set srcset = [] %}

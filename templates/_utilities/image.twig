@@ -1,29 +1,29 @@
 {% macro pictures(photos) %}
 
-{% for photo in photos %}
-  {% if photo.extension == 'svg' %}
-    <span class="sr-only">{{ photo.alt }}</span>
-    {{ svg(photo) }}
-  {% else %}
-    {% set outputWidths = [640, 1024, 1920] %}
-    {% set srcset = [] %}
-    {% for outputWidth in outputWidths %}
-      {% if outputWidth <= photo.width %}
-        {% set srcset = srcset | merge([photo.url({ width: outputWidth }) ~ ' ' ~ outputWidth ~ 'w']) %}
-      {% endif %}
-    {% endfor %}
-    <picture>
-      <source 
-        data-sizes="100vw"
-        type="image/webp" />
-      <img class="lazyload"
-        src="{{ photo.url }}"
-        srcset="{{ srcset | join(', ') }}"
-        {% if photo.alt %}alt="{{ photo.alt }}"{% endif %}
-        sizes="100vw"
-        loading="lazy"
-        class="aspect-ratio-wide" />
-    </picture>
-  {% endif %}
-{% endfor %}
+  {% for photo in photos %}
+    {% if photo.extension == 'svg' %}
+      <span class="sr-only">{{ photo.alt }}</span>
+      {{ svg(photo) }}
+    {% else %}
+      {% set outputWidths = [640, 1024, 1920] %}
+      {% set srcset = [] %}
+      {% for outputWidth in outputWidths %}
+        {% if outputWidth <= photo.width %}
+          {% set srcset = srcset | merge([photo.url({ width: outputWidth }) ~ ' ' ~ outputWidth ~ 'w']) %}
+        {% endif %}
+      {% endfor %}
+      <picture>
+        <source 
+          data-sizes="100vw"
+          type="image/webp" />
+        <img class="lazyload"
+          src="{{ photo.url }}"
+          srcset="{{ srcset | join(', ') }}"
+          {% if photo.alt %}alt="{{ photo.alt }}"{% endif %}
+          sizes="100vw"
+          loading="lazy"
+          class="aspect-ratio-wide" />
+      </picture>
+    {% endif %}
+  {% endfor %}
 {% endmacro %}

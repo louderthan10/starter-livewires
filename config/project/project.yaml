@@ -1,4 +1,4 @@
-dateModified: 1725418450
+dateModified: 1726329232
 elementSources:
   craft\elements\Entry:
     -
@@ -16,7 +16,7 @@ elementSources:
         - title
         - asc
       key: 'custom:6d0e2f9b-417a-4d0c-b23f-affe43c388c0'
-      label: Globals
+      label: Global
       tableAttributes: '-'
       type: custom
     -
@@ -157,7 +157,7 @@ meta:
     aef20f9c-5c84-4c50-8a18-acf0452db62f: Guestbook # Guestbook
     b5b7bfc5-a39e-4d1a-89be-51f0afeb5ce0: Avatar # Avatar
     b579b454-12bd-4710-a436-c26907141957: Full # Full
-    bd99645a-4524-40e4-83dc-c6b12e023bab: Globals # Globals
+    bd99645a-4524-40e4-83dc-c6b12e023bab: Global # Global
     c4b4f50d-7d62-4a4c-bbf8-7aae00fd82c7: Pages # Pages
     c7d2eb61-cdde-4a76-88a9-eb30ddcf155b: Posts # Posts
     c55ca0a9-4bd6-409b-afd8-c1884dafecd0: Team # Team

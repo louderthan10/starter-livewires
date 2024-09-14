@@ -3,7 +3,7 @@ name: 'Public Schema'
 scope:
   - 'sites.58ccb571-6c72-449f-8e7b-6f43c5d416b3:read' # Starter starter
   - 'sections.998bf681-e007-4f7e-a525-863e01a38560:read' # Blog
-  - 'sections.bd99645a-4524-40e4-83dc-c6b12e023bab:read' # Globals
+  - 'sections.bd99645a-4524-40e4-83dc-c6b12e023bab:read' # Global
   - 'sections.aef20f9c-5c84-4c50-8a18-acf0452db62f:read' # Guestbook
   - 'sections.cdad2202-5d55-49ba-995e-962503f5887f:read' # Home
   - 'sections.6ba54824-1c3f-454f-8830-f6cea379bee4:read' # Article

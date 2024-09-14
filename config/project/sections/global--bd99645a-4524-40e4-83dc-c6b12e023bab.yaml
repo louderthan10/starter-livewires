@@ -4,7 +4,7 @@ entryTypes:
   - d55d172f-8b8f-4bb7-b680-31249981c350 # Global
 handle: global
 maxAuthors: 1
-name: Globals
+name: Global
 propagationMethod: all
 siteSettings:
   58ccb571-6c72-449f-8e7b-6f43c5d416b3: # Starter starter

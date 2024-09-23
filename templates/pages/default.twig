@@ -10,7 +10,7 @@
       {% set category = entry.category.eagerly().one() %}
       <p>{% if category %}<span class="font-bold">{{ category.title }}</span> | {% endif %}<time datetime="{{ entry.postDate|atom }}">{{ entry.postDate|date }}</time></p>
       <p class="text-xs">By {{ entry.author.fullName }}</p>
-    <div>
+    </div>
     {% endif %}
   </header>
   <section class="page__content">

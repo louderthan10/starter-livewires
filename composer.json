@@ -23,7 +23,7 @@
   "require": {
     "craftcms/ckeditor": "4.2.0",
     "craftcms/cloud": "*",
-    "craftcms/cms": "5.4.3",
+    "craftcms/cms": "5.4.4",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
@@ -55,14 +55,14 @@
       "@php craft setup/welcome"
     ],
     "post-update-cmd": [
-        "@php craft migrate/all --interactive=0",
-        "@php craft project-config/apply",
-        "@php craft clear-caches/all"
+      "@php craft migrate/all --interactive=0",
+      "@php craft project-config/apply",
+      "@php craft clear-caches/all"
     ],
     "post-install-cmd": [
-        "@php craft migrate/all --interactive=0",
-        "@php craft project-config/apply",
-        "@php craft clear-caches/all"
+      "@php craft migrate/all --interactive=0",
+      "@php craft project-config/apply",
+      "@php craft clear-caches/all"
     ]
   },
   "repositories": [

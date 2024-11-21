@@ -2,9 +2,9 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   - 25b2446d-c1d2-4aa1-8184-3147e617f069 # Text
-handle: posts
+handle: guestbookPosts
 maxAuthors: 1
-name: Posts
+name: 'Guestbook Posts'
 previewTargets:
   -
     __assoc__:

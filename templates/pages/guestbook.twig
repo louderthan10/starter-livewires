@@ -1,6 +1,6 @@
 {% extends "pages/default" %}
-{% set postQuery = craft.entries.section('posts').limit(3).orderBy('postDate DESC') %}
-{% set postSection = craft.app.entries.getSectionByHandle('posts') %}
+{% set postQuery = craft.entries.section('guestbookPosts').limit(3).orderBy('postDate DESC') %}
+{% set postSection = craft.app.entries.getSectionByHandle('guestbookPosts') %}
 {% paginate postQuery as pageInfo, posts %}
 
 {% block title %}

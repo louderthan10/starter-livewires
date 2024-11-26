@@ -1,4 +1,4 @@
-dateModified: 1732659770
+dateModified: 1732660895
 elementSources:
   craft\elements\Entry:
     -
@@ -6,17 +6,19 @@ elementSources:
         class: craft\elements\conditions\entries\EntryCondition
         conditionRules:
           -
-            class: craft\elements\conditions\SlugConditionRule
-            operator: '='
+            class: craft\elements\conditions\entries\SectionConditionRule
+            operator: in
             uid: d81e0ca8-0443-4c79-a338-14e2c1fc8687
-            value: global
+            values:
+              - bd99645a-4524-40e4-83dc-c6b12e023bab # Global
         elementType: craft\elements\Entry
         fieldContext: global
       defaultSort:
         - title
         - asc
+      defaultViewMode: cards
       key: 'custom:6d0e2f9b-417a-4d0c-b23f-affe43c388c0'
-      label: Global
+      label: 'Global Info'
       tableAttributes: '-'
       type: custom
     -
@@ -31,7 +33,7 @@ elementSources:
             operator: in
             uid: 5690305a-9541-42b2-9e20-e0f68d6f7e30
             values:
-              - 998bf681-e007-4f7e-a525-863e01a38560 # Blog
+              - 998bf681-e007-4f7e-a525-863e01a38560 # Blog Index
               - aef20f9c-5c84-4c50-8a18-acf0452db62f # Guestbook
               - cdad2202-5d55-49ba-995e-962503f5887f # Home
         elementType: craft\elements\Entry
@@ -39,21 +41,21 @@ elementSources:
       defaultSort:
         - title
         - asc
+      defaultViewMode: cards
       key: 'custom:bef75f27-face-4b86-af9e-61d96538bfed'
-      label: 'Default pages'
+      label: Static
       tableAttributes: '-'
       type: custom
     -
       defaultSort:
         - structure
         - asc
+      defaultViewMode: ''
       disabled: false
       key: 'section:c4b4f50d-7d62-4a4c-bbf8-7aae00fd82c7' # Pages
       tableAttributes:
         - status
-        - postDate
-        - expiryDate
-        - link
+        - uri
       type: native
     -
       heading: Channels
@@ -62,28 +64,37 @@ elementSources:
       defaultSort:
         - postDate
         - desc
+      defaultViewMode: ''
       disabled: false
       key: 'section:6ba54824-1c3f-454f-8830-f6cea379bee4' # Blog Posts
       tableAttributes:
         - status
+        - 'field:d390347a-09cf-4b70-a3b4-bc3cca520623' # Category
         - postDate
         - expiryDate
         - link
       type: native
     -
-      key: 'section:70b2614b-639a-4de2-8c11-3851d36d6f8c' # Blog categories
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:70b2614b-639a-4de2-8c11-3851d36d6f8c' # Blog Categories
+      tableAttributes:
+        - status
+        - link
       type: native
     -
       defaultSort:
         - postDate
         - desc
+      defaultViewMode: ''
       disabled: false
       key: 'section:3e2a1a6f-88ea-477b-936d-39393f2d594f' # Guestbook Posts
       tableAttributes:
         - status
         - postDate
-        - expiryDate
-        - link
       type: native
     -
       heading: Everything
@@ -92,6 +103,7 @@ elementSources:
       defaultSort:
         - title
         - asc
+      defaultViewMode: ''
       disabled: true
       key: singles
       tableAttributes:
@@ -102,13 +114,12 @@ elementSources:
       defaultSort:
         - postDate
         - desc
+      defaultViewMode: ''
       disabled: false
       key: '*'
       tableAttributes:
         - status
         - section
-        - postDate
-        - expiryDate
         - link
       type: native
     -
@@ -147,10 +158,10 @@ meta:
     9d42aa56-4a66-4d0b-b8a9-84a4cb387788: 'Text block' # Text block
     25b2446d-c1d2-4aa1-8184-3147e617f069: Text # Text
     58ccb571-6c72-449f-8e7b-6f43c5d416b3: 'Starter Blog' # Starter Blog
-    70b2614b-639a-4de2-8c11-3851d36d6f8c: 'Blog categories' # Blog categories
+    70b2614b-639a-4de2-8c11-3851d36d6f8c: 'Blog Categories' # Blog Categories
     163c895f-0c05-4845-80e2-043b2346d830: Address # Address
     697da4c2-e02f-4f49-9d76-e22609ceda25: Page # Page
-    998bf681-e007-4f7e-a525-863e01a38560: Blog # Blog
+    998bf681-e007-4f7e-a525-863e01a38560: 'Blog Index' # Blog Index
     1509c810-f47f-4959-be70-3d5f20b09814: Hero # Hero
     5358db38-27c0-49b4-b9d3-e68326e79da2: Image # Image
     0922209d-2911-419e-82cf-b05113a35f6e: Wide # Wide

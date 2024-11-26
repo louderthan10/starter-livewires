@@ -2,6 +2,9 @@
 
 This is a basic blog starter project for creating [Craft CMS](https://craftcms.com/) using the native [Twig](https://craftcms.com/docs/5.x/development/twig.html) templating language. It's a simple install that requires no database dump and no front-end tooling. It includes a single, first-party plugin ([CKeditor](https://plugins.craftcms.com/ckeditor)) to support a richer authoring experience.
 
+> [!TIP]
+> Check out our full list of [starter projects](https://craftcms.com/starters)!
+
 ## Features
 
 - Dedicated places to edit global information and the primary top-level pages (_Home_, _Blog_, and _Guestbook_);

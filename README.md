@@ -1,6 +1,7 @@
-# Craft starter starter
-This is a starter project for creating Craft starters. It's a basic install that requires no database dump and no npm and only uses one first-party plugin (CKeditor) to keep things simple and maintailable as possible. It includes:
+# Craft Twig starter
+This is a basic blog starter project for creating Craft CMS using the native Twig templating language. It's a simple install that requires no database dump and no npm and only uses one first-party plugin (CKeditor) to keep things simple and maintailable as possible.
 
+## Features
 * A single for globals
 * A home page single
 * A blog single with articles channel and category structure
@@ -11,24 +12,42 @@ This is a starter project for creating Craft starters. It's a basic install that
 
 The Entries sidebar has also been configured to make these pages and sections easier to find for this setup.
 
-While we strongly recommend DDEV for new Craft projects, alternate installation methods are available for anyone with a preexisting environment or preferred workflow that meets its requirements.
+## Installation
 
-Install or update DDEV(opens new window), then follow these steps:
+1. Clone this repository and move into the folder:
 
-Create a project directory and move into it:
+   ```bash
+   git clone https://github.com/craftcms/starter-twig.git
+   cd starter-twig/
+   ```
 
-mkdir my-craft-project
-cd my-craft-project/
+2. Start DDEV:
 
-Start ddev:
+   ```bash
+   ddev start
+   ```
 
-ddev start
+3. Install dependencies:
 
-Run the Craft setup wizard, and accept all defaults (in [square brackets]):
+   ```bash
+   ddev composer install
+   ```
 
-ddev craft install
+4. Run the Craft setup wizard:
 
-Our First-Time Setup(opens new window) guide in the Knowledge Base has more information about what to expect during setup.
+   ```bash
+   ddev craft install
+   ```
 
-Congratulations! You now have a fully-functional Craft application installed and configured. Run ddev launch to view the starter project’s welcome screen:
+Congratulations—Craft has been installed! You can explore the control panel by opening `https://starter-twig.ddev.site/admin` in your browser, or continue reading to import existing content.
 
+> [!NOTE]  
+> If you want to use a different subdomain/prefix for this DDEV project, update the `name` key in `.ddev/config.yaml`.
+
+## Getting Help
+
+If you have any questions or suggestions, you can always reach us at <support@craftcms.com> or [post a GitHub issue](https://github.com/craftcms/starter-wordpress/issues).
+
+Thanks for trying Craft!
+
+:lemon:

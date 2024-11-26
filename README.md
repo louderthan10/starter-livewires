@@ -1,5 +1,5 @@
 # Craft Twig starter
-This is a basic blog starter project for creating Craft CMS using the native Twig templating language. It's a simple install that requires no database dump and no npm and only uses one first-party plugin (CKeditor) to keep things simple and maintailable as possible.
+This is a basic blog starter project for creating Craft CMS using the native Twig templating language. It's a simple install that requires no database dump and no npm and only uses one first-party plugin (CKeditor).
 
 ## Features
 * A single for globals

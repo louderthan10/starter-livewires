@@ -8,7 +8,6 @@ This is a basic blog starter project for creating Craft CMS using the native Twi
 * A guestbook single with guestbook entries channel
 * A pages structure for additional pages and subpages
 * A Cloud-ready assets volume
-* A basic template boilerplate in Twig to test with and act as a starting point to port to other front-ends
 
 The Entries sidebar has also been configured to make these pages and sections easier to find for this setup.
 

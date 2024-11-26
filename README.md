@@ -60,6 +60,12 @@ The Craft [control panel](https://craftcms.com/docs/5.x/system/control-panel.htm
 
 This project was scaffolded from our blank-slate started kit, and therefore follows its overall [directory structure](https://craftcms.com/docs/5.x/system/directory-structure.html) and [configuration scheme](https://craftcms.com/docs/5.x/configure.html).
 
+### Licensing
+
+The free Craft _Solo_ [edition](https://craftcms.com/docs/5.x/editions.html) is active by default, and will automatically acquire a perpetual license to evaluate, develop, and deploy a site for yourself or a friend. This key will be written out to `config/license.key`, and is safe to commit to version control.
+
+You can upgrade to Craft _Team_ or _Pro_ any time! Read more about [licensing](https://craftcms.com/knowledge-base/how-craft-license-enforcement-works) in the Knowledge Base.
+
 ## Tips + Tricks
 
 ### Running on a Different Domain

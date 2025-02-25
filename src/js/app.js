@@ -1,0 +1,3 @@
+import '../css/app.css';
+
+// Your other JS code...

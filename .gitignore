@@ -3,3 +3,4 @@
 /vendor
 /web/uploads/*
 .DS_Store
+node_modules

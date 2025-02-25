@@ -1,0 +1,202 @@
+/* Modern Normalize.css v2025 */
+
+/* Document
+   ========================================================================== */
+
+:root {
+  color-scheme: light dark;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+/* Sections
+   ========================================================================== */
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeSpeed;
+}
+
+/* Content grouping
+   ========================================================================== */
+
+main {
+  display: block;
+}
+
+/* Interactive
+   ========================================================================== */
+
+summary {
+  display: list-item;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+a {
+  color: inherit;
+  text-decoration-skip-ink: auto;
+  text-underline-offset: 0.15em;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Forms
+   ========================================================================== */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  appearance: button;
+  cursor: pointer;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+[type='search'] {
+  appearance: textfield;
+  outline-offset: -2px;
+}
+
+::-webkit-search-decoration {
+  appearance: none;
+}
+
+::-webkit-file-upload-button {
+  appearance: button;
+  font: inherit;
+}
+
+/* Interactive
+   ========================================================================== */
+
+dialog {
+  background-color: Canvas;
+  border: solid;
+  color: CanvasText;
+  display: block;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 1em;
+  position: fixed;
+  right: 0;
+  width: fit-content;
+}
+
+dialog:not([open]) {
+  display: none;
+}
+
+/* Tables
+   ========================================================================== */
+
+table {
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+
+/* Modern media defaults
+   ========================================================================== */
+
+:where(iframe, object, embed, img, audio, video) {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Modern focus styles
+   ========================================================================== */
+
+:focus-visible {
+  outline: 2px solid Highlight;
+  outline-offset: 2px;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

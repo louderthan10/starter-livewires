@@ -1,0 +1,19 @@
+:root {
+  /* @link https://utopia.fyi/space/calculator?c=320,16,1.125,1240,18,1.25,10,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+  /* Base Values */
+  --viewport-min: 320;
+  --viewport-max: 1480;
+
+  /* Spacing Scale in Pixels */
+  --space-3xs-min: 4;     --space-3xs-max: 5;
+  --space-2xs-min: 8;     --space-2xs-max: 9;
+  --space-xs-min: 12;     --space-xs-max: 14;
+  --space-s-min: 16;      --space-s-max: 18;
+  --space-m-min: 24;      --space-m-max: 27;
+  --space-l-min: 32;      --space-l-max: 36;
+  --space-xl-min: 48;     --space-xl-max: 54;
+  --space-2xl-min: 64;    --space-2xl-max: 72;
+  --space-3xl-min: 96;    --space-3xl-max: 108;
+
+}

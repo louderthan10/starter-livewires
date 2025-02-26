@@ -1,0 +1,8 @@
+h1 { font-size: var(--text-4xl); line-height: var(--line-height-4xl); }
+h2 { font-size: var(--text-3xl); line-height: var(--line-height-3xl); }
+h3 { font-size: var(--text-2xl); line-height: var(--line-height-2xl); }
+h4 { font-size: var(--text-xl); line-height: var(--line-height-xl); }
+h5 { font-size: var(--text-lg); line-height: var(--line-height-lg); }
+h6 { font-size: var(--text-base); line-height: var(--line-height-base); } 
+
+small { font-size: var(--text-sm); line-height: var(--line-height-sm); }

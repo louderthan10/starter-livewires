@@ -1,0 +1,17 @@
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.125,1240,18,1.25,10,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+  --base-font-size: 16;
+
+  /* Type Scale in Pixels */
+  --type-xs-min:   11;    --type-xs-max: 12;    --leading-xs: 1.5;
+  --type-sm-min:   13;    --type-sm-max: 14;    --leading-sm: 1.5;
+  --type-base-min: 16;  --type-base-max: 18;  --leading-base: 1.5;
+  --type-lg-min:   17;    --type-lg-max: 28;    --leading-lg: 1.5;
+  --type-xl-min:   24;    --type-xl-max: 36;    --leading-xl: 1.333;
+  --type-2xl-min:  32;   --type-2xl-max: 48;   --leading-2xl: 1.25;
+  --type-3xl-min:  42;   --type-3xl-max: 60;   --leading-3xl: 1;
+  --type-4xl-min:  48;   --type-4xl-max: 72;   --leading-4xl: 1;
+  --type-5xl-min:  60;   --type-5xl-max: 100;  --leading-5xl: 1;
+  --type-6xl-min:  72;   --type-6xl-max: 151;  --leading-6xl: 1;
+}

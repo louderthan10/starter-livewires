@@ -1,0 +1,12 @@
+{
+  "src/js/app.js": {
+    "file": "assets/app-Df8JH2_T.js",
+    "name": "app",
+    "src": "src/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app-RWv2PiA2.css"
+    ],
+    "integrity": "sha384-R+wtLfODU9jPDwUFDlKOhIxGWpGePJLaEO7tSF0yeEjYUjvsDKQkepJJIeTrlUUp"
+  }
+}

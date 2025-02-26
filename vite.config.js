@@ -1,16 +1,13 @@
-import {defineConfig} from 'vite';
-import manifestSRI from 'vite-plugin-manifest-sri';
+import { defineConfig } from 'vite'
 import path from 'path';
-import viteCompression from 'vite-plugin-compression';
-import ViteRestart from 'vite-plugin-restart';
 
-export default defineConfig(({command}) => ({
-    base: command === 'serve' ? '' : '/dist/',
+// Load from .env
+const PRIMARY_SITE_URL = process.env.PRIMARY_SITE_URL || 'https://starter-livewires.ddev.site';
+const siteUrl = new URL(PRIMARY_SITE_URL);
+
+export default defineConfig({
+    base: '/',
     build: {
-        commonjsOptions: {
-            transformMixedEsModules: true,
-        },
-        sourcemap: true,
         manifest: true,
         outDir: 'web/dist/',
         rollupOptions: {
@@ -19,38 +16,13 @@ export default defineConfig(({command}) => ({
             },
         },
     },
-    plugins: [
-        manifestSRI(),
-        viteCompression({
-            filter: /\.(js|mjs|json|css|map)$/i
-        }),
-        ViteRestart({
-            reload: [
-                'templates/**/*',
-            ],
-        }),
-    ],
-    publicDir: path.resolve(__dirname, 'src/public'),
-    resolve: {
-        alias: {
-            '@': path.resolve(__dirname, 'src'),
-            '@css': path.resolve(__dirname, 'src/css'),
-            '@js': path.resolve(__dirname, 'src/js'),
-        },
-    },
     server: {
-        fs: {
-            strict: false,
-            allow: ['..']
-        },
-        hmr: {
-            host: 'starter-livewires.ddev.site',
-            protocol: 'wss',
-        },
-        host: true,
+        host: '0.0.0.0',
         port: 3000,
         strictPort: true,
-        https: true,
-        origin: 'https://starter-livewires.ddev.site:3001',
-    },
-}));
+        origin: `${process.env.DDEV_PRIMARY_URL.replace(/:\d+$/, "")}:3000`,
+        cors: {
+            origin: /https?:\/\/([A-Za-z0-9\-\.]+)?(\.ddev\.site)(?::\d+)?$/,
+        },
+    }
+});

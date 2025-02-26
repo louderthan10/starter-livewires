@@ -1,0 +1,20 @@
+:root {
+  --background: white;
+  --foreground: black;
+  --accent: red;
+  --muted: grey;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: white;
+    --foreground: black;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: black;
+    --foreground: white; 
+  }
+}

@@ -1,0 +1,31 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 697da4c2-e02f-4f49-9d76-e22609ceda25 # Page
+handle: manual
+maxAuthors: 1
+name: Manual
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  58ccb571-6c72-449f-8e7b-6f43c5d416b3: # Livewires
+    enabledByDefault: true
+    hasUrls: true
+    template: _pages.twig
+    uriFormat: 'manual/{slug}'
+structure:
+  maxLevels: null
+  uid: dfc244bd-b110-4a64-a8be-84dfd87d172d
+type: structure

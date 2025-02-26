@@ -1,0 +1,64 @@
+/* Type scale system
+   ========================================================================== */
+:root {
+
+  --type-xs: clamp(
+    calc(var(--type-xs-min) * var(--rem)),
+    calc(var(--type-xs-min) * var(--rem) + (var(--type-xs-max) - var(--type-xs-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--type-xs-max) * var(--rem))
+  );
+
+  --type-sm: clamp(
+    calc(var(--type-sm-min) * var(--rem)),
+    calc(var(--type-sm-min) * var(--rem) + (var(--type-sm-max) - var(--type-sm-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--type-sm-max) * var(--rem))
+  );
+
+  --type-base: clamp(
+    calc(var(--type-base-min) * var(--rem)),
+    calc(var(--type-base-min) * var(--rem) + (var(--type-base-max) - var(--type-base-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--type-base-max) * var(--rem))
+  );
+
+  --type-lg: clamp(
+    calc(var(--type-lg-min) * var(--rem)),
+    calc(var(--type-lg-min) * var(--rem) + (var(--type-lg-max) - var(--type-lg-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--type-lg-max) * var(--rem))
+  );
+
+  --type-xl: clamp(
+    calc(var(--type-xl-min) * var(--rem)),
+    calc(var(--type-xl-min) * var(--rem) + (var(--type-xl-max) - var(--type-xl-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--type-xl-max) * var(--rem))
+  );
+
+  --type-2xl: clamp(
+    calc(var(--type-2xl-min) * var(--rem)),
+    calc(var(--type-2xl-min) * var(--rem) + (var(--type-2xl-max) - var(--type-2xl-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--type-2xl-max) * var(--rem))
+  );
+
+  --type-3xl: clamp(
+    calc(var(--type-3xl-min) * var(--rem)),
+    calc(var(--type-3xl-min) * var(--rem) + (var(--type-3xl-max) - var(--type-3xl-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--type-3xl-max) * var(--rem))
+  );
+
+  --type-4xl: clamp(
+    calc(var(--type-4xl-min) * var(--rem)),
+    calc(var(--type-4xl-min) * var(--rem) + (var(--type-4xl-max) - var(--type-4xl-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--type-4xl-max) * var(--rem))
+  );
+
+  --type-5xl: clamp(
+    calc(var(--type-5xl-min) * var(--rem)),
+    calc(var(--type-5xl-min) * var(--rem) + (var(--type-5xl-max) - var(--type-5xl-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--type-5xl-max) * var(--rem))
+  );
+
+  --type-6xl: clamp(
+    calc(var(--type-6xl-min) * var(--rem)),
+    calc(var(--type-6xl-min) * var(--rem) + (var(--type-6xl-max) - var(--type-6xl-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--type-6xl-max) * var(--rem))
+  );
+}

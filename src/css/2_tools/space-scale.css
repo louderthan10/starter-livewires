@@ -1,0 +1,114 @@
+:root {
+  /* @link https://utopia.fyi/space/calculator?c=320,16,1.125,1240,18,1.25,10,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+  /* Single space values */
+  --space-3xs: clamp(
+    calc(var(--space-3xs-min) * var(--rem)),
+    calc(var(--space-3xs-min) * var(--rem) + (var(--space-3xs-max) - var(--space-3xs-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--space-3xs-max) * var(--rem))
+  );
+
+  --space-2xs: clamp(
+    calc(var(--space-2xs-min) * var(--rem)),
+    calc(var(--space-2xs-min) * var(--rem) + (var(--space-2xs-max) - var(--space-2xs-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--space-2xs-max) * var(--rem))
+  );
+
+  --space-xs: clamp(
+    calc(var(--space-xs-min) * var(--rem)),
+    calc(var(--space-xs-min) * var(--rem) + (var(--space-xs-max) - var(--space-xs-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--space-xs-max) * var(--rem))
+  );
+
+  --space-s: clamp(
+    calc(var(--space-s-min) * var(--rem)),
+    calc(var(--space-s-min) * var(--rem) + (var(--space-s-max) - var(--space-s-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--space-s-max) * var(--rem))
+  );
+
+  --space-m: clamp(
+    calc(var(--space-m-min) * var(--rem)),
+    calc(var(--space-m-min) * var(--rem) + (var(--space-m-max) - var(--space-m-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--space-m-max) * var(--rem))
+  );
+
+  --space-l: clamp(
+    calc(var(--space-l-min) * var(--rem)),
+    calc(var(--space-l-min) * var(--rem) + (var(--space-l-max) - var(--space-l-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--space-l-max) * var(--rem))
+  );
+
+  --space-xl: clamp(
+    calc(var(--space-xl-min) * var(--rem)),
+    calc(var(--space-xl-min) * var(--rem) + (var(--space-xl-max) - var(--space-xl-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--space-xl-max) * var(--rem))
+  );
+
+  --space-2xl: clamp(
+    calc(var(--space-2xl-min) * var(--rem)),
+    calc(var(--space-2xl-min) * var(--rem) + (var(--space-2xl-max) - var(--space-2xl-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--space-2xl-max) * var(--rem))
+  );
+
+  --space-3xl: clamp(
+    calc(var(--space-3xl-min) * var(--rem)),
+    calc(var(--space-3xl-min) * var(--rem) + (var(--space-3xl-max) - var(--space-3xl-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--space-3xl-max) * var(--rem))
+  );
+
+  /* One-up pairs */
+  --space-3xs-2xs: clamp(
+    calc(var(--space-3xs-min) * var(--rem)),
+    calc(var(--space-3xs-min) * var(--rem) + (var(--space-2xs-max) - var(--space-3xs-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--space-2xs-max) * var(--rem))
+  );
+
+  --space-2xs-xs: clamp(
+    calc(var(--space-2xs-min) * var(--rem)),
+    calc(var(--space-2xs-min) * var(--rem) + (var(--space-xs-max) - var(--space-2xs-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--space-xs-max) * var(--rem))
+  );
+
+  --space-xs-s: clamp(
+    calc(var(--space-xs-min) * var(--rem)),
+    calc(var(--space-xs-min) * var(--rem) + (var(--space-s-max) - var(--space-xs-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--space-s-max) * var(--rem))
+  );
+
+  --space-s-m: clamp(
+    calc(var(--space-s-min) * var(--rem)),
+    calc(var(--space-s-min) * var(--rem) + (var(--space-m-max) - var(--space-s-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--space-m-max) * var(--rem))
+  );
+
+  --space-m-l: clamp(
+    calc(var(--space-m-min) * var(--rem)),
+    calc(var(--space-m-min) * var(--rem) + (var(--space-l-max) - var(--space-m-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--space-l-max) * var(--rem))
+  );
+
+  --space-l-xl: clamp(
+    calc(var(--space-l-min) * var(--rem)),
+    calc(var(--space-l-min) * var(--rem) + (var(--space-xl-max) - var(--space-l-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--space-xl-max) * var(--rem))
+  );
+
+  --space-xl-2xl: clamp(
+    calc(var(--space-xl-min) * var(--rem)),
+    calc(var(--space-xl-min) * var(--rem) + (var(--space-2xl-max) - var(--space-xl-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--space-2xl-max) * var(--rem))
+  );
+
+  --space-2xl-3xl: clamp(
+    calc(var(--space-2xl-min) * var(--rem)),
+    calc(var(--space-2xl-min) * var(--rem) + (var(--space-3xl-max) - var(--space-2xl-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--space-3xl-max) * var(--rem))
+  );
+
+  /* Custom pairs */
+  --space-s-l: clamp(
+    calc(var(--space-s-min) * var(--rem)),
+    calc(var(--space-s-min) * var(--rem) + (var(--space-l-max) - var(--space-s-min)) * var(--rem) * var(--fluid-bp)),
+    calc(var(--space-l-max) * var(--rem))
+  );
+}

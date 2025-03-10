@@ -1,0 +1,30 @@
+h1 { 
+  font-size: var(--text-4xl); 
+  line-height: var(--leading-4xl); 
+}
+h2 { 
+  font-size: var(--text-3xl); 
+  line-height: var(--leading-3xl); 
+}
+h3 { 
+  font-size: var(--text-2xl); 
+  line-height: var(--leading-2xl); 
+}
+h4 { 
+  font-size: var(--text-xl); 
+  line-height: var(--leading-xl); 
+}
+h6 { 
+  font-size: var(--text-base);
+  line-height: var(--leading-base); 
+} 
+
+p {
+  font-size: var(--text-base);
+  line-height: var(--leading-base);
+}
+
+small { 
+  font-size: var(--text-sm); 
+  line-height: var(--leading-sm); 
+}

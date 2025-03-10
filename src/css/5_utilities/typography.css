@@ -8,6 +8,3 @@
 .text-4xl { font-size: var(--text-4xl); line-height: var(--leading-4xl); }
 .text-5xl { font-size: var(--text-5xl); line-height: var(--leading-5xl); }
 .text-6xl { font-size: var(--text-6xl); line-height: var(--leading-6xl); }
-.text-7xl { font-size: var(--text-7xl); line-height: var(--leading-7xl); }
-.text-8xl { font-size: var(--text-8xl); line-height: var(--leading-8xl); }
-.text-9xl { font-size: var(--text-9xl); line-height: var(--leading-9xl); }

@@ -1,0 +1,52 @@
+{# {% macro item(url, heading, subhead, eventType, date, target, numeral) %} #}
+{% macro font(payload) %}
+{# Props 
+input: {
+  title,
+  weight,
+  typeface,
+  italic
+}  
+#}
+{# Defaults #}
+{% set title = payload.title ?? '' %}
+{% set weight = payload.weight ?? '' %}
+{% set typeface = payload.typeface ?? '' %}
+{% set italic = payload.italic ?? false %}
+{% set display = payload.display ?? false %}
+{% set headline = payload.headline ?? false %}
+{% set text = payload.text ?? false %}
+
+<div class="mb6 {{ weight }} {{ typeface }}">
+  {% if title %}<h4>{{ title }}</h4>{% endif %}
+  {% if display %}<p class="text-6xl mt1 mb2">AaBbCc1234</p>{% endif %}
+  {% if headline %}
+  <p class="text-3xl mb2">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br >
+    abcdefghijklmnopqrstuvwxyz<br >
+    1234567890<br >
+    #*@$%&amp;_.-,&ndash;;:&mdash;?!&lsquo;&rsquo;&ldquo;&rdquo;()</p>
+  {% endif %}
+  {% if text %}
+  <p class="text-base">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br >
+    abcdefghijklmnopqrstuvwxyz<br >
+    1234567890<br >
+    #*@$%&amp;_.-,&ndash;;:&mdash;?!&lsquo;&rsquo;&ldquo;&rdquo;()</p>
+  {% endif %}
+  {% if italic %}
+  {% if title %}<h4 class="mt2">{{ title }} italic</h4>{% endif %}
+    {% if display %}<p class="text-6xl mt1 mb2"><em>AaBbCc1234</em></p>{% endif %}
+    {% if headline %}
+    <p class="text-3xl mb2"><em>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br >
+      abcdefghijklmnopqrstuvwxyz<br >
+      1234567890<br >
+      #*@$%&amp;_.-,&ndash;;:&mdash;?!&lsquo;&rsquo;&ldquo;&rdquo;()</em></p>
+    {% endif %}
+    {% if text %}
+    <p class="text-base"><em>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br >
+      abcdefghijklmnopqrstuvwxyz<br >
+      1234567890<br >
+      #*@$%&amp;_.-,&ndash;;:&mdash;?!&lsquo;&rsquo;&ldquo;&rdquo;()</em></p>
+    {% endif %}
+  {% endif %}
+</div>
+{% endmacro %}

@@ -14,3 +14,7 @@ body {
   background: var(--foreground); 
   color: var(--background);
 }
+
+.prose > * + * {
+  margin-block-start: var(--space-xs, 1em);
+}

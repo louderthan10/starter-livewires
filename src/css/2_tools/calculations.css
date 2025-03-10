@@ -1,7 +1,0 @@
-:root {
-  --rem: calc(1rem / var(--base-font-size));
-  --fluid-bp: calc(
-    (100vw - calc(var(--viewport-min) * 1px)) / 
-    (var(--viewport-max) - var(--viewport-min))
-  );
-}

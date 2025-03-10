@@ -1,34 +1,58 @@
 {% extends "pages/default" %}
+{% import "_partials/manual/typeSample" as typeSample %}
 
 {% block title %}Typography{% endblock %}
 
 {% block content %}
   <div class="container mx-auto px-2 sm:grid gap-6 grid-cols-2">
-    <section class="mb-12 prose flow">
-      <h1>Typography</h1>
-      <p>This is a test of the typography system.</p>
-      <h2>Heading 2</h2> 
-      <p>This is a test of the typography system.</p>
-      <h3>Heading 3</h3>
-      <p>This is a test of the typography system.</p>
-      <h4>Heading 4</h4>
-      <p>This is a test of the typography system.</p>
-      <h5>Heading 5</h5>
-      <p>This is a test of the typography system.</p>
-      <h6>Heading 6</h6>
-      <p>This is a test of the typography system.</p>
-      <small>Small text</small>
-      <hr />
-      <p class="text-xs">This is a test of the typography system.</p>
-      <p class="text-sm">This is a test of the typography system.</p>
-      <p class="text-base">This is a test of the typography system.</p>
-      <p class="text-lg">This is a test of the typography system.</p>
-      <p class="text-xl">This is a test of the typography system.</p>
-      <p class="text-2xl">This is a test of the typography system.</p>
-      <p class="text-3xl">This is a test of the typography system.</p>
-      <p class="text-4xl">This is a test of the typography system.</p>
-      <p class="text-5xl">This is a test of the typography system.</p>
-      <p class="text-6xl">This is a test of the typography system.</p>
-    </section>
+    <div class="mb-12">
+      <header>
+        <h1>Typography</h1>
+        <p>This is a test of the typography system.</p>
+      </header>
+
+      <section class="prose">
+        <h2>Fonts</h2>
+        {{ typeSample.font({
+          title: "Font name",
+          typeface: "font-family-sans",
+          display: true,
+          headline: true,
+          text: true
+        }) }}
+        {{ typeSample.font({
+          title: "Font name",
+          typeface: "font-family-sans",
+          display: true,
+          headline: true,
+          text: true
+        }) }}
+      </section>
+      <section class="prose"> 
+        <h1>Heading 1</h1> 
+        <p>This is a test of the typography system.</p>
+        <h2>Heading 2</h2> 
+        <p>This is a test of the typography system.</p>
+        <h4>Heading 4</h4>
+        <p>This is a test of the typography system.</p>
+        <h5>Heading 5</h5>
+        <p>This is a test of the typography system.</p>
+        <h6>Heading 6</h6>
+        <p>This is a test of the typography system.</p>
+      </section>
+      <section class="prose">
+        <h2>Text sizes</h2>
+        <p class="text-6xl">6XL: Quartz Fox</p>
+        <p class="text-5xl">5XL: Vexing Wizards</p>
+        <p class="text-4xl">4XL: Quick fox jumps nightly</p>
+        <p class="text-3xl">3XL: Pack my box with five dozen jugs</p>
+        <p class="text-2xl">2XL: Sphinx of black quartz, judge my vow</p>
+        <p class="text-xl">XL: The five boxing wizards jump quickly over the lazy dog</p>
+        <p class="text-lg">LG: How razorback-jumping frogs can level six piqued gymnasts! Crazy Fredrick bought many very exquisite opal jewels. The quick onyx goblin jumps over the lazy dwarf. We promptly judged antique ivory buckles for the next prize.</p>
+        <p class="text-base">BASE: Waltz, bad nymph, for quick jigs vex. Glib jocks quiz nymph to vex dwarf. Jaded zombies acted quaintly but kept driving their oxen forward. The jay, pig, fox, zebra, and my wolves quack! Watch "Jeopardy!", Alex Trebek's fun TV quiz game. Sympathizing would fix Quaker objectives.</p>
+        <p class="text-sm">SM: Pack my box with five dozen liquor jugs. Amazingly few discotheques provide jukeboxes. The five boxing wizards jump quickly. How vexingly quick daft zebras jump! Bright vixens jump; dozy fowl quack. Sphinx of black quartz, judge my vow. Jackdaws love my big sphinx of quartz.</p>
+        <p class="text-xs">XS: The quick brown fox jumps over the lazy dog while jackdaws love my big sphinx of quartz. Five or six big jet planes zoomed quickly by the tower. We promptly judged antique ivory buckles for the next prize. How razorback-jumping frogs can level six piqued gymnasts! Crazy Fredrick bought many very exquisite opal jewels.</p>
+      </section>
+    </div>
   </div>
 {% endblock %}

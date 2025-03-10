@@ -1,17 +1,16 @@
 @import '1_settings/fonts.css';
-@import '1_settings/typography.css';
 @import '1_settings/spacing.css';
+@import '1_settings/typography.css';
 @import '1_settings/grid.css';
 @import '1_settings/motion.css';
 @import '1_settings/color.css';
 
 @import '2_tools/normalize.css';
-@import '2_tools/calculations.css';
 @import '2_tools/type-scale.css';
 @import '2_tools/space-scale.css';
 
 @import '3_elements/base.css';
-@import '3_elements/headings.css';
+@import '3_elements/text.css';
 
 @import '4_components/grid.css';
 

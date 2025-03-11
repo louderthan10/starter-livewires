@@ -1,15 +1,16 @@
 :root {
 
   --rem-base: 16; /* px */
+	--sm-base: 0.8; /* rem = 12.8px = xs */
+	--lg-base: 1; /* rem = 16px = xs */
+
   --scale-sm: 1.15;
   --scale-lg: 1.3;
 
 	--sm: 320; /* px */
-	--sm-base: 0.8; /* rem */
-
-
 	--lg: 1240; /* px */
-	--lg-base: 1; /* rem */
+
+
 
   /* Line Heights */
   --leading-xs: 1.5;

@@ -24,5 +24,8 @@ export default defineConfig({
         cors: {
             origin: /https?:\/\/([A-Za-z0-9\-\.]+)?(\.ddev\.site)(?::\d+)?$/,
         },
+        watch: {
+            include: ['src/**/*', 'templates/**/*'],
+        },
     }
 });

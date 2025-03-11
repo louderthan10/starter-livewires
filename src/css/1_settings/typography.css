@@ -1,16 +1,16 @@
 :root {
-  /* Text Scale in Pixels */
-  --text-xs-min:   11;    --text-xs-max: 12;
-  --text-sm-min:   13;    --text-sm-max: 14;
-  --text-base-min: 16;    --text-base-max: 18;
-  --text-lg-min:   17;    --text-lg-max: 28;
-  --text-xl-min:   24;    --text-xl-max: 36;
-  --text-2xl-min:  32;    --text-2xl-max: 48;
-  --text-3xl-min:  42;    --text-3xl-max: 60;
-  --text-4xl-min:  48;    --text-4xl-max: 72;
-  --text-5xl-min:  60;    --text-5xl-max: 100;
-  --text-6xl-min:  72;    --text-6xl-max: 151;
-  
+
+  --rem-base: 16; /* px */
+  --scale-sm: 1.15;
+  --scale-lg: 1.3;
+
+	--sm: 320; /* px */
+	--sm-base: 0.8; /* rem */
+
+
+	--lg: 1240; /* px */
+	--lg-base: 1; /* rem */
+
   /* Line Heights */
   --leading-xs: 1.5;
   --leading-sm: 1.5;

@@ -1,61 +1,114 @@
 :root {
+  /* Base variables pulled from typography.css */
+  --delta: calc(var(--lg) - var(--sm));
+  
+  /* Text XS */
+  --xs-min: calc(var(--sm-base));
+  --xs-max: calc(var(--lg-base));
+  --xs-slope: calc((var(--xs-max) - var(--xs-min)) / var(--delta));
+  --xs-intercept: calc(var(--xs-min) - var(--xs-slope) * var(--sm));
   --text-xs: clamp(
-    calc(var(--text-xs-min) * 1px),
-    calc(calc(var(--text-xs-min) * 1px) + (var(--text-xs-max) - var(--text-xs-min)) * ((100vw - calc(var(--viewport-min) * 1px)) / (var(--viewport-max) - var(--viewport-min)))),
-    calc(var(--text-xs-max) * 1px)
+    calc(var(--xs-min) * 1rem),
+    calc(var(--xs-slope) * 100vw * var(--rem-base) + var(--xs-intercept) * 1rem),
+    calc(var(--xs-max) * 1rem)
   );
-  
+
+  /* Text SM */
+  --sm-min: calc(var(--sm-base) * var(--scale-sm));
+  --sm-max: calc(var(--lg-base) * var(--scale-lg));
+  --sm-slope: calc((var(--sm-max) - var(--sm-min)) / var(--delta));
+  --sm-intercept: calc(var(--sm-min) - var(--sm-slope) * var(--sm));
   --text-sm: clamp(
-    calc(var(--text-sm-min) * 1px),
-    calc(calc(var(--text-sm-min) * 1px) + (var(--text-sm-max) - var(--text-sm-min)) * ((100vw - calc(var(--viewport-min) * 1px)) / (var(--viewport-max) - var(--viewport-min)))),
-    calc(var(--text-sm-max) * 1px)
+    calc(var(--sm-min) * 1rem),
+    calc(var(--sm-slope) * 100vw * var(--rem-base) + var(--sm-intercept) * 1rem),
+    calc(var(--sm-max) * 1rem)
   );
-  
+
+  /* Text BASE (same as MD in your original) */
+  --base-min: calc(var(--sm-min) * var(--scale-sm));
+  --base-max: calc(var(--sm-max) * var(--scale-lg));
+  --base-slope: calc((var(--base-max) - var(--base-min)) / var(--delta));
+  --base-intercept: calc(var(--base-min) - var(--base-slope) * var(--sm));
   --text-base: clamp(
-    calc(var(--text-base-min) * 1px),
-    calc(calc(var(--text-base-min) * 1px) + (var(--text-base-max) - var(--text-base-min)) * ((100vw - calc(var(--viewport-min) * 1px)) / (var(--viewport-max) - var(--viewport-min)))),
-    calc(var(--text-base-max) * 1px)
+    calc(var(--base-min) * 1rem),
+    calc(var(--base-slope) * 100vw * var(--rem-base) + var(--base-intercept) * 1rem),
+    calc(var(--base-max) * 1rem)
   );
-  
+
+  /* Text LG */
+  --lg-min: calc(var(--base-min) * var(--scale-sm));
+  --lg-max: calc(var(--base-max) * var(--scale-lg));
+  --lg-slope: calc((var(--lg-max) - var(--lg-min)) / var(--delta));
+  --lg-intercept: calc(var(--lg-min) - var(--lg-slope) * var(--sm));
   --text-lg: clamp(
-    calc(var(--text-lg-min) * 1px),
-    calc(calc(var(--text-lg-min) * 1px) + (var(--text-lg-max) - var(--text-lg-min)) * ((100vw - calc(var(--viewport-min) * 1px)) / (var(--viewport-max) - var(--viewport-min)))),
-    calc(var(--text-lg-max) * 1px)
+    calc(var(--lg-min) * 1rem),
+    calc(var(--lg-slope) * 100vw * var(--rem-base) + var(--lg-intercept) * 1rem),
+    calc(var(--lg-max) * 1rem)
   );
-  
+
+  /* Text XL */
+  --xl-min: calc(var(--lg-min) * var(--scale-sm));
+  --xl-max: calc(var(--lg-max) * var(--scale-lg));
+  --xl-slope: calc((var(--xl-max) - var(--xl-min)) / var(--delta));
+  --xl-intercept: calc(var(--xl-min) - var(--xl-slope) * var(--sm));
   --text-xl: clamp(
-    calc(var(--text-xl-min) * 1px),
-    calc(calc(var(--text-xl-min) * 1px) + (var(--text-xl-max) - var(--text-xl-min)) * ((100vw - calc(var(--viewport-min) * 1px)) / (var(--viewport-max) - var(--viewport-min)))),
-    calc(var(--text-xl-max) * 1px)
+    calc(var(--xl-min) * 1rem),
+    calc(var(--xl-slope) * 100vw * var(--rem-base) + var(--xl-intercept) * 1rem),
+    calc(var(--xl-max) * 1rem)
   );
-  
+
+  /* Text 2XL */
+  --2xl-min: calc(var(--xl-min) * var(--scale-sm));
+  --2xl-max: calc(var(--xl-max) * var(--scale-lg));
+  --2xl-slope: calc((var(--2xl-max) - var(--2xl-min)) / var(--delta));
+  --2xl-intercept: calc(var(--2xl-min) - var(--2xl-slope) * var(--sm));
   --text-2xl: clamp(
-    calc(var(--text-2xl-min) * 1px),
-    calc(calc(var(--text-2xl-min) * 1px) + (var(--text-2xl-max) - var(--text-2xl-min)) * ((100vw - calc(var(--viewport-min) * 1px)) / (var(--viewport-max) - var(--viewport-min)))),
-    calc(var(--text-2xl-max) * 1px)
+    calc(var(--2xl-min) * 1rem),
+    calc(var(--2xl-slope) * 100vw * var(--rem-base) + var(--2xl-intercept) * 1rem),
+    calc(var(--2xl-max) * 1rem)
   );
-  
+
+  /* Text 3XL */
+  --3xl-min: calc(var(--2xl-min) * var(--scale-sm));
+  --3xl-max: calc(var(--2xl-max) * var(--scale-lg));
+  --3xl-slope: calc((var(--3xl-max) - var(--3xl-min)) / var(--delta));
+  --3xl-intercept: calc(var(--3xl-min) - var(--3xl-slope) * var(--sm));
   --text-3xl: clamp(
-    calc(var(--text-3xl-min) * 1px),
-    calc(calc(var(--text-3xl-min) * 1px) + (var(--text-3xl-max) - var(--text-3xl-min)) * ((100vw - calc(var(--viewport-min) * 1px)) / (var(--viewport-max) - var(--viewport-min)))),
-    calc(var(--text-3xl-max) * 1px)
+    calc(var(--3xl-min) * 1rem),
+    calc(var(--3xl-slope) * 100vw * var(--rem-base) + var(--3xl-intercept) * 1rem),
+    calc(var(--3xl-max) * 1rem)
   );
-  
+
+  /* Text 4XL */
+  --4xl-min: calc(var(--3xl-min) * var(--scale-sm));
+  --4xl-max: calc(var(--3xl-max) * var(--scale-lg));
+  --4xl-slope: calc((var(--4xl-max) - var(--4xl-min)) / var(--delta));
+  --4xl-intercept: calc(var(--4xl-min) - var(--4xl-slope) * var(--sm));
   --text-4xl: clamp(
-    calc(var(--text-4xl-min) * 1px),
-    calc(calc(var(--text-4xl-min) * 1px) + (var(--text-4xl-max) - var(--text-4xl-min)) * ((100vw - calc(var(--viewport-min) * 1px)) / (var(--viewport-max) - var(--viewport-min)))),
-    calc(var(--text-4xl-max) * 1px)
+    calc(var(--4xl-min) * 1rem),
+    calc(var(--4xl-slope) * 100vw * var(--rem-base) + var(--4xl-intercept) * 1rem),
+    calc(var(--4xl-max) * 1rem)
   );
-  
+
+  /* Text 5XL */
+  --5xl-min: calc(var(--4xl-min) * var(--scale-sm));
+  --5xl-max: calc(var(--4xl-max) * var(--scale-lg));
+  --5xl-slope: calc((var(--5xl-max) - var(--5xl-min)) / var(--delta));
+  --5xl-intercept: calc(var(--5xl-min) - var(--5xl-slope) * var(--sm));
   --text-5xl: clamp(
-    calc(var(--text-5xl-min) * 1px),
-    calc(calc(var(--text-5xl-min) * 1px) + (var(--text-5xl-max) - var(--text-5xl-min)) * ((100vw - calc(var(--viewport-min) * 1px)) / (var(--viewport-max) - var(--viewport-min)))),
-    calc(var(--text-5xl-max) * 1px)
+    calc(var(--5xl-min) * 1rem),
+    calc(var(--5xl-slope) * 100vw * var(--rem-base) + var(--5xl-intercept) * 1rem),
+    calc(var(--5xl-max) * 1rem)
   );
-  
+
+  /* Text 6XL */
+  --6xl-min: calc(var(--5xl-min) * var(--scale-sm));
+  --6xl-max: calc(var(--5xl-max) * var(--scale-lg));
+  --6xl-slope: calc((var(--6xl-max) - var(--6xl-min)) / var(--delta));
+  --6xl-intercept: calc(var(--6xl-min) - var(--6xl-slope) * var(--sm));
   --text-6xl: clamp(
-    calc(var(--text-6xl-min) * 1px),
-    calc(calc(var(--text-6xl-min) * 1px) + (var(--text-6xl-max) - var(--text-6xl-min)) * ((100vw - calc(var(--viewport-min) * 1px)) / (var(--viewport-max) - var(--viewport-min)))),
-    calc(var(--text-6xl-max) * 1px)
+    calc(var(--6xl-min) * 1rem),
+    calc(var(--6xl-slope) * 100vw * var(--rem-base) + var(--6xl-intercept) * 1rem),
+    calc(var(--6xl-max) * 1rem)
   );
 }

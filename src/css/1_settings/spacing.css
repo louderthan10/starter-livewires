@@ -1,10 +1,7 @@
 :root {
   /* @link https://utopia.fyi/space/calculator?c=320,16,1.125,1240,18,1.25,10,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
-  /* Base Values */
-  --base-font-size: 16;
-  --viewport-min: 320;
-  --viewport-max: 1480;
+
 
   /* Spacing Scale in Pixels */
   --space-3xs-min: 4;     --space-3xs-max: 5;

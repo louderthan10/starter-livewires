@@ -1,114 +1,141 @@
 :root {
-  /* @link https://utopia.fyi/space/calculator?c=320,16,1.125,1240,18,1.25,10,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  /* Base variables */
+  --delta: calc(var(--lg) - var(--sm));
 
-  /* Single space values */
+  /* Space 3XS */
+  --space-3xs-slope: calc((var(--space-3xs-max) - var(--space-3xs-min)) / var(--delta));
+  --space-3xs-intercept: calc(var(--space-3xs-min) - var(--space-3xs-slope) * var(--sm));
   --space-3xs: clamp(
-    calc(var(--space-3xs-min) * var(--rem)),
-    calc(var(--space-3xs-min) * var(--rem) + (var(--space-3xs-max) - var(--space-3xs-min)) * var(--rem) * var(--fluid-bp)),
-    calc(var(--space-3xs-max) * var(--rem))
+    calc(var(--space-3xs-min) * 1px),
+    calc(var(--space-3xs-slope) * 100vw + var(--space-3xs-intercept) * 1px),
+    calc(var(--space-3xs-max) * 1px)
   );
 
+  /* Space 2XS */
+  --space-2xs-slope: calc((var(--space-2xs-max) - var(--space-2xs-min)) / var(--delta));
+  --space-2xs-intercept: calc(var(--space-2xs-min) - var(--space-2xs-slope) * var(--sm));
   --space-2xs: clamp(
-    calc(var(--space-2xs-min) * var(--rem)),
-    calc(var(--space-2xs-min) * var(--rem) + (var(--space-2xs-max) - var(--space-2xs-min)) * var(--rem) * var(--fluid-bp)),
-    calc(var(--space-2xs-max) * var(--rem))
+    calc(var(--space-2xs-min) * 1px),
+    calc(var(--space-2xs-slope) * 100vw + var(--space-2xs-intercept) * 1px),
+    calc(var(--space-2xs-max) * 1px)
   );
 
+  /* Space XS */
+  --space-xs-slope: calc((var(--space-xs-max) - var(--space-xs-min)) / var(--delta));
+  --space-xs-intercept: calc(var(--space-xs-min) - var(--space-xs-slope) * var(--sm));
   --space-xs: clamp(
-    calc(var(--space-xs-min) * var(--rem)),
-    calc(var(--space-xs-min) * var(--rem) + (var(--space-xs-max) - var(--space-xs-min)) * var(--rem) * var(--fluid-bp)),
-    calc(var(--space-xs-max) * var(--rem))
+    calc(var(--space-xs-min) * 1px),
+    calc(var(--space-xs-slope) * 100vw + var(--space-xs-intercept) * 1px),
+    calc(var(--space-xs-max) * 1px)
   );
 
+  /* Space S */
+  --space-s-slope: calc((var(--space-s-max) - var(--space-s-min)) / var(--delta));
+  --space-s-intercept: calc(var(--space-s-min) - var(--space-s-slope) * var(--sm));
   --space-s: clamp(
-    calc(var(--space-s-min) * var(--rem)),
-    calc(var(--space-s-min) * var(--rem) + (var(--space-s-max) - var(--space-s-min)) * var(--rem) * var(--fluid-bp)),
-    calc(var(--space-s-max) * var(--rem))
+    calc(var(--space-s-min) * 1px),
+    calc(var(--space-s-slope) * 100vw + var(--space-s-intercept) * 1px),
+    calc(var(--space-s-max) * 1px)
   );
 
+  /* Space M */
+  --space-m-slope: calc((var(--space-m-max) - var(--space-m-min)) / var(--delta));
+  --space-m-intercept: calc(var(--space-m-min) - var(--space-m-slope) * var(--sm));
   --space-m: clamp(
-    calc(var(--space-m-min) * var(--rem)),
-    calc(var(--space-m-min) * var(--rem) + (var(--space-m-max) - var(--space-m-min)) * var(--rem) * var(--fluid-bp)),
-    calc(var(--space-m-max) * var(--rem))
+    calc(var(--space-m-min) * 1px),
+    calc(var(--space-m-slope) * 100vw + var(--space-m-intercept) * 1px),
+    calc(var(--space-m-max) * 1px)
   );
 
+  /* Space L */
+  --space-l-slope: calc((var(--space-l-max) - var(--space-l-min)) / var(--delta));
+  --space-l-intercept: calc(var(--space-l-min) - var(--space-l-slope) * var(--sm));
   --space-l: clamp(
-    calc(var(--space-l-min) * var(--rem)),
-    calc(var(--space-l-min) * var(--rem) + (var(--space-l-max) - var(--space-l-min)) * var(--rem) * var(--fluid-bp)),
-    calc(var(--space-l-max) * var(--rem))
+    calc(var(--space-l-min) * 1px),
+    calc(var(--space-l-slope) * 100vw + var(--space-l-intercept) * 1px),
+    calc(var(--space-l-max) * 1px)
   );
 
+  /* Space XL */
+  --space-xl-slope: calc((var(--space-xl-max) - var(--space-xl-min)) / var(--delta));
+  --space-xl-intercept: calc(var(--space-xl-min) - var(--space-xl-slope) * var(--sm));
   --space-xl: clamp(
-    calc(var(--space-xl-min) * var(--rem)),
-    calc(var(--space-xl-min) * var(--rem) + (var(--space-xl-max) - var(--space-xl-min)) * var(--rem) * var(--fluid-bp)),
-    calc(var(--space-xl-max) * var(--rem))
+    calc(var(--space-xl-min) * 1px),
+    calc(var(--space-xl-slope) * 100vw + var(--space-xl-intercept) * 1px),
+    calc(var(--space-xl-max) * 1px)
   );
 
+  /* Space 2XL */
+  --space-2xl-slope: calc((var(--space-2xl-max) - var(--space-2xl-min)) / var(--delta));
+  --space-2xl-intercept: calc(var(--space-2xl-min) - var(--space-2xl-slope) * var(--sm));
   --space-2xl: clamp(
-    calc(var(--space-2xl-min) * var(--rem)),
-    calc(var(--space-2xl-min) * var(--rem) + (var(--space-2xl-max) - var(--space-2xl-min)) * var(--rem) * var(--fluid-bp)),
-    calc(var(--space-2xl-max) * var(--rem))
+    calc(var(--space-2xl-min) * 1px),
+    calc(var(--space-2xl-slope) * 100vw + var(--space-2xl-intercept) * 1px),
+    calc(var(--space-2xl-max) * 1px)
   );
 
+  /* Space 3XL */
+  --space-3xl-slope: calc((var(--space-3xl-max) - var(--space-3xl-min)) / var(--delta));
+  --space-3xl-intercept: calc(var(--space-3xl-min) - var(--space-3xl-slope) * var(--sm));
   --space-3xl: clamp(
-    calc(var(--space-3xl-min) * var(--rem)),
-    calc(var(--space-3xl-min) * var(--rem) + (var(--space-3xl-max) - var(--space-3xl-min)) * var(--rem) * var(--fluid-bp)),
-    calc(var(--space-3xl-max) * var(--rem))
+    calc(var(--space-3xl-min) * 1px),
+    calc(var(--space-3xl-slope) * 100vw + var(--space-3xl-intercept) * 1px),
+    calc(var(--space-3xl-max) * 1px)
   );
 
-  /* One-up pairs */
+  /* Space pairs (one step) - following Utopia's pattern */
   --space-3xs-2xs: clamp(
-    calc(var(--space-3xs-min) * var(--rem)),
-    calc(var(--space-3xs-min) * var(--rem) + (var(--space-2xs-max) - var(--space-3xs-min)) * var(--rem) * var(--fluid-bp)),
-    calc(var(--space-2xs-max) * var(--rem))
+    calc(var(--space-3xs-min) * 1px),
+    calc(var(--space-3xs-min) * 1px + (var(--space-2xs-max) - var(--space-3xs-min)) * ((100vw - (var(--sm) * 1px)) / (var(--lg) - var(--sm)))),
+    calc(var(--space-2xs-max) * 1px)
   );
 
   --space-2xs-xs: clamp(
-    calc(var(--space-2xs-min) * var(--rem)),
-    calc(var(--space-2xs-min) * var(--rem) + (var(--space-xs-max) - var(--space-2xs-min)) * var(--rem) * var(--fluid-bp)),
-    calc(var(--space-xs-max) * var(--rem))
+    calc(var(--space-2xs-min) * 1px),
+    calc(var(--space-2xs-min) * 1px + (var(--space-xs-max) - var(--space-2xs-min)) * ((100vw - (var(--sm) * 1px)) / (var(--lg) - var(--sm)))),
+    calc(var(--space-xs-max) * 1px)
   );
 
   --space-xs-s: clamp(
-    calc(var(--space-xs-min) * var(--rem)),
-    calc(var(--space-xs-min) * var(--rem) + (var(--space-s-max) - var(--space-xs-min)) * var(--rem) * var(--fluid-bp)),
-    calc(var(--space-s-max) * var(--rem))
+    calc(var(--space-xs-min) * 1px),
+    calc(var(--space-xs-min) * 1px + (var(--space-s-max) - var(--space-xs-min)) * ((100vw - (var(--sm) * 1px)) / (var(--lg) - var(--sm)))),
+    calc(var(--space-s-max) * 1px)
   );
 
   --space-s-m: clamp(
-    calc(var(--space-s-min) * var(--rem)),
-    calc(var(--space-s-min) * var(--rem) + (var(--space-m-max) - var(--space-s-min)) * var(--rem) * var(--fluid-bp)),
-    calc(var(--space-m-max) * var(--rem))
+    calc(var(--space-s-min) * 1px),
+    calc(var(--space-s-min) * 1px + (var(--space-m-max) - var(--space-s-min)) * ((100vw - (var(--sm) * 1px)) / (var(--lg) - var(--sm)))),
+    calc(var(--space-m-max) * 1px)
   );
 
   --space-m-l: clamp(
-    calc(var(--space-m-min) * var(--rem)),
-    calc(var(--space-m-min) * var(--rem) + (var(--space-l-max) - var(--space-m-min)) * var(--rem) * var(--fluid-bp)),
-    calc(var(--space-l-max) * var(--rem))
+    calc(var(--space-m-min) * 1px),
+    calc(var(--space-m-min) * 1px + (var(--space-l-max) - var(--space-m-min)) * ((100vw - (var(--sm) * 1px)) / (var(--lg) - var(--sm)))),
+    calc(var(--space-l-max) * 1px)
   );
 
   --space-l-xl: clamp(
-    calc(var(--space-l-min) * var(--rem)),
-    calc(var(--space-l-min) * var(--rem) + (var(--space-xl-max) - var(--space-l-min)) * var(--rem) * var(--fluid-bp)),
-    calc(var(--space-xl-max) * var(--rem))
+    calc(var(--space-l-min) * 1px),
+    calc(var(--space-l-min) * 1px + (var(--space-xl-max) - var(--space-l-min)) * ((100vw - (var(--sm) * 1px)) / (var(--lg) - var(--sm)))),
+    calc(var(--space-xl-max) * 1px)
   );
 
   --space-xl-2xl: clamp(
-    calc(var(--space-xl-min) * var(--rem)),
-    calc(var(--space-xl-min) * var(--rem) + (var(--space-2xl-max) - var(--space-xl-min)) * var(--rem) * var(--fluid-bp)),
-    calc(var(--space-2xl-max) * var(--rem))
+    calc(var(--space-xl-min) * 1px),
+    calc(var(--space-xl-min) * 1px + (var(--space-2xl-max) - var(--space-xl-min)) * ((100vw - (var(--sm) * 1px)) / (var(--lg) - var(--sm)))),
+    calc(var(--space-2xl-max) * 1px)
   );
 
   --space-2xl-3xl: clamp(
-    calc(var(--space-2xl-min) * var(--rem)),
-    calc(var(--space-2xl-min) * var(--rem) + (var(--space-3xl-max) - var(--space-2xl-min)) * var(--rem) * var(--fluid-bp)),
-    calc(var(--space-3xl-max) * var(--rem))
+    calc(var(--space-2xl-min) * 1px),
+    calc(var(--space-2xl-min) * 1px + (var(--space-3xl-max) - var(--space-2xl-min)) * ((100vw - (var(--sm) * 1px)) / (var(--lg) - var(--sm)))),
+    calc(var(--space-3xl-max) * 1px)
   );
 
-  /* Custom pairs */
+  /* Custom pairs - example */
   --space-s-l: clamp(
-    calc(var(--space-s-min) * var(--rem)),
-    calc(var(--space-s-min) * var(--rem) + (var(--space-l-max) - var(--space-s-min)) * var(--rem) * var(--fluid-bp)),
-    calc(var(--space-l-max) * var(--rem))
+    calc(var(--space-s-min) * 1px),
+    calc(var(--space-s-min) * 1px + (var(--space-l-max) - var(--space-s-min)) * ((100vw - (var(--sm) * 1px)) / (var(--lg) - var(--sm)))),
+    calc(var(--space-l-max) * 1px)
   );
 }

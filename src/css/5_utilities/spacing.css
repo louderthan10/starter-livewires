@@ -1,4 +1,5 @@
 .flow > * + * {
   margin-block-start: var(--space-s);
 }
+.p-px { padding: 1px; }
 

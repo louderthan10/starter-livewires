@@ -28,3 +28,7 @@ small {
   font-size: var(--text-sm); 
   line-height: var(--leading-sm); 
 }
+
+nav ul {
+  list-style-type: none;
+}

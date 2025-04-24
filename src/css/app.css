@@ -1,7 +1,6 @@
 /* Settings */
 @import '1_settings/fonts.css';
 @import '1_settings/typography.css';
-@import '1_settings/spacing.css';
 @import '1_settings/grid.css';
 @import '1_settings/motion.css';
 @import '1_settings/color.css';
@@ -14,6 +13,8 @@
 /* HTML elements */
 @import '3_elements/base.css';
 @import '3_elements/text.css';
+@import '3_elements/borders.css';
+@import '3_elements/forms.css';
 
 /* Components */
 @import '4_components/grid.css';
@@ -21,3 +22,4 @@
 /* Utility classes*/
 @import '5_utilities/spacing.css';
 @import '5_utilities/typography.css';
+@import '5_utilities/visibility.css';

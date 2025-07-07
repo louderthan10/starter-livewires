@@ -1,0 +1,30 @@
+.entries {
+  > * {
+    border-top: var(--hairline-border);
+  }
+  > *:first-child {
+    border-top: var(--border);
+  }
+  a {
+    overflow: hidden;
+    text-decoration: none;
+  }
+  a > *:first-child {
+    margin-top: 0;
+  }
+  a > *:last-child {
+    margin-bottom: 0;
+  }
+  img {
+    display: block;
+  }
+}
+.entries__default {
+  padding: calc(var(--line) * 0.5) 0;
+}
+.entries__links {
+  img {
+    max-width: calc(var(--line) * 1.5);
+    margin-right: calc(var(--line) * 0.25);
+  }
+}

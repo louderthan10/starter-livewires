@@ -1,0 +1,117 @@
+@supports (--css: variables) {
+  hr {
+    border-color: var(--foreground);
+  }
+  .rule { border-top: 1px solid var(--foreground); }
+  .rule--dark { border-top: var(--black-border); }
+  .rule--light,
+  .rule--hairline { border-top: 1px solid var(--accent2); }
+  .rule--red { border-top: var(--accent-border); }
+  .rule--white { border-top: var(--white-border); }
+  .rule--cream { border-top: var(--cream-border); }
+  .rule--grey { border-top: var(--grey-border); }
+  .rule--light-grey { border-top: var(--light-grey-border); }
+  .rule--dark-grey { border-top: var(--dark-grey-border); }
+  .rule--light-red { border-top: var(--light-red-border); }
+  .rule--dark-red { border-top: var(--dark-red-border); }
+  .rule--light-blue { border-top: var(--light-blue-border); }
+  .rule--dark-blue { border-top: var(--dark-blue-border); }
+  .rule--black { border-top: var(--black-border); }
+  .rule--yellow { border-top: var(--yellow-border); }
+  .rule--green { border-top: var(--green-border); }
+  .rule--bar { border-top: 10px solid var(--off-fg); }
+  .rule--dashed { border-style: dashed; }
+  .rule--dotted { border-style: dotted; }
+  .rule--double {
+    border-style: double;
+    border-width: 4px;
+    border-color: var(--foreground);
+  }
+  .rule--first div:first-of-type,
+  .rule--first div:first-of-type > hr,
+  .rule--first article:first-of-type > hr {
+    border-color: var(--foreground);
+  }
+  .square-border,
+  .rule--square {
+    border:none;
+    background-image: url(../../img/square-border.svg);
+    background-repeat: repeat-x;
+    background-size: 11px 10px;
+    background-position:center center;
+    height:11px;
+  }
+
+  .border-width-1 { border-width: 1px; }
+  .border-width-2 { border-width: 2px; }
+  .border-width-3 { border-width: calc(var(--line) / 4); }
+  .border-width-4 { border-width: calc(var(--line) / 3); }
+  .border-width-5 { border-width: calc(var(--line) / 2); }
+  .border-width-6 { border-width: var(--line); }
+
+  .rule-width-1 { border-top-width: 1px; }
+  .rule-width-2 { border-top-width: 2px; }
+  .rule-width-3 { border-top-width: calc(var(--line) / 4); }
+  .rule-width-4 { border-top-width: calc(var(--line) / 3); }
+  .rule-width-5 { border-top-width: calc(var(--line) / 2); }
+  .rule-width-6 { border-top-width: var(--line); }
+
+  .black-border { border-color: var(--black); }
+  .white-border { border-color: var(--white); }
+  .cream-border { border-color: var(--cream); }
+  .grey-225-border { border-color: var(--grey-225); }
+  .grey-250-border { border-color: var(--grey-250); }
+  .light-grey-border { border-color: var(--light-grey); }
+  .grey-border { border-color: var(--grey); }
+  .dark-grey-border { border-color: var(--dark-grey); }
+  .green-border { border-color: var(--green); }
+  .dark-blue-border { border-color: var(--dark-blue); }
+  .light-blue-border { border-color: var(--light-blue); }
+  .dark-red-border { border-color: var(--dark-red); }
+  .light-red-border { border-color: var(--light-red); }
+  .rule--accent,
+  .accent-border { border-color: var(--accent); }
+  .rule--accent2,
+  .accent2-border { border-color: var(--accent2); }
+  .foreground-border { border-color: var(--foreground); }
+
+  .solid-border { border-style: solid; }
+  .dashed-border { border-style: dashed; }
+  .dotted-border { border-style: dotted; }
+  .double-border { border-style: double; }
+
+  .no-border { border: none; }
+
+  .rounded { border-radius: var(--radius); }
+  .rounded--top { 
+    border-top-left-radius: var(--radius); 
+    border-top-right-radius: var(--radius);
+  }
+  .rounded--bottom { 
+    border-bottom-left-radius: var(--radius); 
+    border-bottom-right-radius: var(--radius);
+  }
+  .rounded--left { 
+    border-top-left-radius: var(--radius); 
+    border-bottom-left-radius: var(--radius);
+  }
+  .rounded--right { 
+    border-top-right-radius: var(--radius); 
+    border-bottom-right-radius: var(--radius);
+  }
+  .rounded--bottom-left { 
+    border-bottom-left-radius: var(--radius); 
+  }
+  .rounded--bottom-right { 
+    border-bottom-right-radius: var(--radius);
+  }
+  .rounded--top-left { 
+    border-top-left-radius: var(--radius); 
+  }
+  .rounded--top-right { 
+    border-top-right-radius: var(--radius);
+  }
+  .rounded--tight { border-radius: var(--tight-radius); }
+  .rounded--loose { border-radius: var(--loose-radius); }
+  .round { border-radius: 1000px; }
+}

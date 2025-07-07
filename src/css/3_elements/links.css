@@ -1,0 +1,171 @@
+a {
+  hyphens:none;
+  text-decoration: underline;
+}
+
+a:link,
+a:visited {
+  color: #FF592D;
+}
+a:hover,
+a:active,
+a:focus {
+  color: #9A0000;
+}
+a time,
+.title a:link,
+.title a:visited,
+h1 a:link,
+h1 a:visited {
+  text-decoration: none;
+}
+.title a:hover,
+.title a:active,
+.title a:focus,
+h1 a:hover,
+h1 a:active,
+h1 a:focus {
+  text-decoration: underline;
+}
+
+@supports(text-decoration-thickness: 1px) {
+  a {
+    text-decoration-thickness: 1px;
+  }
+  h1,
+  .title {
+    a:link,
+    a:visited {
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.1em;
+    }
+  }
+}
+
+.more,
+.icon-link,
+.action {
+  display: flex;
+  align-content: flex-end;
+
+  svg {
+    margin-right: 0.333em;
+    vertical-align: middle;
+  }
+}
+.icon-link svg {
+  width: 1em;
+  height: 1em;
+  flex: 0 1 auto;
+}
+.action svg,
+.more svg {
+  width: 0.8em;
+  height: 0.8em;
+}
+
+@supports(--css: variables) {
+  a {
+    transition: var(--ease-link);
+  }
+  a:link,
+  a:visited {
+    color: var(--off-fg);
+    text-decoration-color: var(--accent);
+  }
+  a:active,
+  a:hover,
+  a:focus {
+    text-decoration-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .actions a,
+  a.action {
+    font-size: var(--font-size-2);
+    line-height: var(--line-height-2);
+    letter-spacing: var(--letter-spacing-2);
+    font-weight: var(--semibold);
+    display: inline-block;
+  }
+  a.action:link,
+  a.action:visited {
+    color: var(--accent); 
+    text-decoration: none;
+  }
+  a.action:hover,
+  a.action:active,
+  a.action:focus {
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+  }
+  a.action.negative-action:link,
+  a.action.negative-action:visited {
+    color: var(--red);
+  }
+  a.action.negative-action:hover,
+  a.action.negative-action:active,
+  a.action.negative-action:focus {
+    color: var(--red-650);
+  }
+  .more,
+  .icon-link,
+  .action {
+    path {
+      fill: var(--foreground);
+    }
+  }
+  .more a:link svg path,
+  .more a:visited svg path,
+  a.action:link svg path,
+  a.action:visited svg path {
+    transition: var(--ease-link);
+  }
+  .more a:active svg path,
+  .more a:hover svg path,
+  .more a:focus svg path,
+  a.action:hover svg path,
+  a.action:active svg path,
+  a.action:focus svg path {
+    fill: var(--accent);
+  }
+  a.action.negative-action:link svg path,
+  a.action.negative-action:visited svg path {
+    fill: var(--red);
+  }
+  a.action.negative-action:hover svg path,
+  a.action.negative-action:active svg path,
+  a.action.negative-action:focus svg path {
+    fill: var(--red-650);
+  }
+
+  .more,
+  p.more {
+    z-index: 3;
+    a {
+      font-weight: var(--semibold);
+      font-family: var(--sans);
+      border: none;
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+    }
+  }
+
+  .hgroup{
+    h1:first-child a,
+    h2:first-child a,
+    h3:first-child a,
+    h4:first-child a,
+    h5:first-child a,
+    h6:first-child a {
+      text-decoration: none;
+    }
+  }
+  .entry-link img{
+    max-width: calc(var(--line) * 1.333);
+    max-height: calc(var(--line) * 1.333);
+  }
+}

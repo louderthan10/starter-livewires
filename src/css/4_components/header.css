@@ -1,0 +1,197 @@
+.logo {
+  outline:0;
+
+  figure {
+    width: 9rem;
+
+    svg {
+      display:block;
+    }
+  }
+}
+.page-header {
+  transition: all 100ms cubic-bezier(0.6, 0, 0.210, .9);
+  transform: translateY(0%);
+  position: sticky;
+  top:0;
+  width: 100%;
+  z-index: 1000;
+}
+.page-header.showing {
+  transform: translateY(0%);
+}
+.page-header.hiding {
+  transform: translateY(-100%);
+}
+.header {
+  align-items: start;
+  justify-content: space-between;
+}
+.nav {
+  position: fixed;
+  width:100%;
+  z-index: 100;
+  opacity: 0;
+}
+.nav a {
+  text-decoration: none;
+}
+.nav a:hover,
+.nav a:focus,
+.nav a:active {
+  text-decoration: underline;
+}
+.page-header.hiding.menu-open,
+.page-header.showing.menu-open {
+  position: absolute;
+  top:0;
+  bottom: 0;
+  transform: translateY(0%);
+}
+.page-header.hiding.menu-open .nav,
+.page-header.showing.menu-open .nav {
+  opacity: 1;
+}
+.page-header.hiding.menu-closed .nav,
+.page-header.showing.menu-closed .nav {
+  opacity: 0;
+}
+.menu-button {
+  display: block;
+}
+.menu-button svg {
+  width: calc(var(--line) * 2);
+  height: calc(var(--line) * 2);
+}
+@supports(--css: variables) {
+  .ltbllogo0{ fill:var(--white); }
+  .ltbllogo1{ fill:var(--accent); }
+  .ltbllogo2 { fill:var(--background); }
+  .ltbllogo3 { fill:var(--foreground); }
+  .ltbllogo4 { fill:var(--dark-red); }
+
+  .lms {
+    .ltbllogo1{ fill:var(--light-blue); }
+  }
+  .logo {
+    padding: calc(var(--line) * 0.5);
+  }
+  .nav {
+    a {
+      font-family: var(--heading);
+      letter-spacing: var(--letter-spacing-3);
+      font-size: var(--font-size-2);
+      padding-top: calc(var(--line) * 0.75);
+      padding-bottom: calc(var(--line) * 0.75);
+      padding-right: calc(var(--line) * 0.5);
+      padding-left: calc(var(--line) * 0.5);
+      border-top: 1px solid var(--accent2);
+    }
+  }
+  .subnav {
+    a {
+      padding-left: calc(var(--line) * 1);
+    }
+  }
+  .utility-nav {
+    padding-top: calc(var(--line) * 0.5);
+    padding-right: calc(var(--line) * 0.5);
+  }
+  .utility-nav .button svg {
+    margin-right: 0;
+  }
+  .nav a.active:link,
+  .nav a.active:visited,
+  .nav a.active:hover,
+  .nav a.active:active,
+  .nav a.active:focus,
+  .segment1-class-listing a.class-listing-nav:link,
+  .segment1-class-listing a.class-listing-nav:visited,
+  .segment1-class-listing a.class-listing-nav:hover,
+  .segment1-class-listing a.class-listing-nav:active,
+  .segment1-class-listing a.class-listing-nav:focus,
+  .segment1-class a.module-nav:link,
+  .segment1-class a.module-nav:visited,
+  .segment1-class a.module-nav:hover,
+  .segment1-class a.module-nav:active,
+  .segment1-class a.module-nav:focus,
+  .segment1-your-class a.your-class-nav:link,
+  .segment1-your-class a.your-class-nav:visited,
+  .segment1-your-class a.your-class-nav:hover,
+  .segment1-your-class a.your-class-nav:active,
+  .segment1-your-class a.your-class-nav:focus {
+    color: var(--accent);
+  }
+  .admin-nav + .header .utility-nav {
+    top: calc(var(--line) * 2.25);
+  }
+  
+  @media only screen and (min-width: 75em) {
+    .header {
+      display: flex;
+    }
+    .page-header.hiding.menu-open,
+    .page-header.showing.menu-open {
+      position: sticky;
+      top:auto;
+      bottom: auto;
+    }
+    .logo {
+      width: auto;
+      padding: calc(var(--line) * 0.75) calc(var(--line) * 1);
+      transition: var(--ease-link);
+    }
+    .nav {
+      padding-right: calc(var(--line) * 2);
+      padding-top: calc(var(--line) * 0.66);
+      text-align: right;
+
+      a {
+        font-size: var(--font-size-2);
+        border: none;
+        padding-top: calc(var(--line) * 0.6);
+        padding-bottom: calc(var(--line) * 0.4);
+        display: inline-block;
+      }
+      div {
+        display: inline-block;
+      }
+    }
+    .utility-nav {
+      padding-top: calc(var(--line) * 1.1);
+      padding-right: calc(var(--line) * 1);
+      
+      a.menu-button {
+        display: none;
+      }
+    }   
+    .nav,
+    .page-header.hiding.menu-closed .nav,
+    .page-header.showing.menu-closed .nav,
+    .page-header.hiding.menu-open .nav,
+    .page-header.showing.menu-open .nav {
+      opacity: 1;
+    }
+
+    .subnav {
+      position:absolute;
+      top: calc(var(--line) * 2.25);
+      width: 100%;
+      right: calc(var(--line) * 2);
+
+      a {
+        padding-left: calc(var(--line) * 0.5);
+        
+      }
+    }
+    .has-subnav .logo {
+      padding-bottom: calc(var(--line) * 2);
+    }
+  }
+
+  @media only screen and (min-width: 58em) {
+    .logo figure {
+        width:9rem;
+    }
+  }
+}

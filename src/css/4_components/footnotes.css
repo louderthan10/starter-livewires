@@ -1,0 +1,44 @@
+@supports(--css: variables) {
+  .footnotes {
+    font-family: var(--sans);
+    font-size: var(--font-size-1);
+    line-height: var(--line-height-1);
+  }
+  .bigfoot-footnote.is-active,
+  .bigfoot-footnote,
+  .bigfoot-footnote__tooltip {
+    opacity:1;
+    border:none;
+  }
+  .bigfoot-footnote.is-active__wrapper ,
+  .bigfoot-footnote__wrapper ,
+  .bigfoot-footnote__tooltip__wrapper {
+    border-radius: var(--radius);
+    background: var(--white);
+  }
+  .bigfoot-footnote.is-active__content,
+  .bigfoot-footnote__content,
+  .bigfoot-footnote__tooltip__content {
+    padding-top: calc(var(--line) * 0.75);
+    padding-bottom: calc(var(--line) * 0.75);
+    padding-left: var(--line);
+    padding-right: var(--line);
+    color: var(--dark-grey);
+
+    p {
+      font-family: var(--text) !important;
+      color: var(--dark-grey);
+      font-size: var(--font-size-1) !important;
+      line-height: var(--line-height-1);
+    }
+    a:link,
+    a:visited {
+      color: var(--dark-grey);
+    }
+    a:hover,
+    a:active,
+    a:focus {
+      color: var(--light-red);
+    }
+  }
+}

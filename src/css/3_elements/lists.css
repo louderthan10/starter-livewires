@@ -1,0 +1,60 @@
+@supports(--css: variables) {
+  ul,
+  ol {
+    margin: 0 0 var(--line) calc(var(--line) * 0.667);
+    padding:0;
+  }
+  ul ul,
+  ol ol {
+    margin-bottom: 0;
+    margin-left: calc(var(--line) * 1.333);
+  }
+  ul {
+    list-style: disc;
+  }
+  li {
+    margin-bottom: calc(var(--line) * 0.25);
+  }
+  dl {
+    margin:0 0 var(--line) 0;
+    padding:0
+  }
+
+  dt {
+    font-family: var(--heading);
+    font-weight: var(--bold);
+    color: var(--off-fg);
+  }
+
+  dd {
+    margin-left:0;
+    margin-bottom: var(--line);
+  }
+  .check-list,
+  .check-list ul {
+    list-style-type: none;
+  }
+  .check-list li {
+    position: relative;
+  }
+  .check-list li:before {
+    content:'■';
+    margin-right: 0.333em;
+  }
+  .check-list li.incomplete:before {
+    content:'□';
+  }
+
+  .inner-lists ul,
+  .inner-lists ol {
+    list-style-position: inside;
+  }
+
+
+  @media only screen and (min-width: 64em) {
+    ul,
+    ol {
+      margin-left: 0;
+    }
+  }
+}

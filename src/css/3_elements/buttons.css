@@ -1,0 +1,237 @@
+@supports(--css: variables) {
+  :root {
+    --button-bg: var(--foreground);
+    --button-bg-hover: var(--off-fg);
+    --button-bg-active: var(--off-fg);
+    --button-bg-focus: var(--off-fg);
+    --button-text: var(--background);
+  }
+  button,
+  input[type="submit"],
+  .button,
+  a.button {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--ease-link); 
+    font-family: var(--text);
+    font-weight: var(--semibold);
+    letter-spacing: var(--letter-spacing-2);
+    font-size: var(--font-size-2);
+    line-height: var(--line-height-2);
+    padding: calc(var(--line) * 0.5) var(--line);
+    background-color: var(--button-bg);
+    color: var(--button-text);
+  }
+
+  button:hover,
+  input[type="submit"]:hover,
+  .button:hover {
+    background-color: var(--button-bg-hover);
+  }
+  button:active,
+  input[type="submit"]:active,
+  .button:active {
+    background-color: var(--button-bg-active);  
+  }
+  button:focus,
+  input[type="submit"]:focus,
+  .button:focus {
+    background-color: var(--button-bg-focus);
+  }
+  button:active,
+  input[type="submit"]:active,
+  .button:active,
+  button:focus,
+  input[type="submit"]:focus,
+  .button:focus { 
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.5) inset;
+    outline-style: dotted;
+    outline-width: 1px;
+  }
+  button svg,
+  input[type="submit"] svg,
+  .button svg {
+    width: calc(var(--line) / 1.75);
+    height: calc(var(--line) / 1.75);
+    margin-right: calc(var(--line) * 0.3);
+    margin-top: -0.2em;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  button svg *,
+  input[type="submit"] svg *,
+  .button svg * {
+    fill: var(--button-text);
+    transition: var(--ease-link);
+  }
+
+
+  /* button sizes */
+  .button--tiny,
+  a.button--tiny {
+    font-size: var(--font-size-0);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: 1;
+    padding: calc(var(--line) * 0.1) calc(var(--line) * 0.25) calc(var(--line) * 0.15);
+    margin: 0;
+
+    svg {
+      margin-right: 0;
+      width: calc(var(--line) / 2);
+      height: calc(var(--line) / 2);
+    }
+  }
+  .button--small,
+  a.button--small {
+    font-size: var(--font-size-1);
+    letter-spacing: var(--letter-spacing-1);
+    line-height: var(--line-height-1);
+    padding: calc(var(--line) * 0.25) calc(var(--line) * 0.5);
+  }
+  .button--small svg {
+    width: calc(var(--line) / 2);
+    height: calc(var(--line) / 2);
+  }
+  .button--large {
+    padding: calc(var(--line) * 1) calc(var(--line) * 1.75);
+  }
+  .button--icon {
+    padding-left: calc(var(--line) * 0.5);
+    padding-right: calc(var(--line) * 0.5);
+  }
+  .button--invisible {
+    --button-bg: var(--off-bg);
+    --button-text: var(--foreground);
+    --button-bg-hover: var(--accent2);
+    --button-bg-active: var(--accent2);
+    --button-bg-focus: var(--accent2);
+    --accent: var(--accent);
+  }
+  .button--invisible.button--negative {
+    --button-bg: var(--off-bg);
+    --button-bg-hover: var(--red-100);
+    --button-bg-active: var(--red-100);
+    --button-bg-focus: var(--red-100);
+    --button-text: var(--red);
+    --accent: var(--red);
+  }
+  .button--full,
+  a.button--full {
+    display: block;
+    width: 100%;
+  }
+  .off-bg {
+    button{
+      --button-bg: var(--foreground);
+      --button-bg-hover: var(--off-fg);
+      --button-bg-active: var(--off-fg);
+      --button-bg-focus: var(--off-fg);
+      --button-text: var(--background);
+    }
+  }
+  /* button colours */
+  .button--white {
+    --button-bg: var(--grey-100);
+    --button-bg-hover: var(--grey-250);
+    --button-bg-active: var(--grey-300);
+    --button-bg-focus: var(--grey-300);
+    --button-text: var(--grey-950);
+  }
+  .button--black {
+    --button-bg: var(--grey-950);
+    --button-bg-hover: var(--grey-900);
+    --button-bg-active: var(--grey-900);
+    --button-bg-focus: var(--grey-900);
+    --button-text: var(--grey-225);
+  }
+  .button--light-red {
+    --button-bg: var(--light-red);
+    --button-bg-hover: var(--light-red-600);
+    --button-bg-active: var(--light-red-700);
+    --button-bg-focus: var(--light-red-700);
+    --button-text: var(--black);
+  }
+  .button--red {
+    --button-bg: var(--red);
+    --button-bg-hover: var(--red-600);
+    --button-bg-active: var(--red-700);
+    --button-bg-focus: var(--red-700);
+    --button-text: var(--white);
+  }
+  .button--dark-red {
+    --button-bg: var(--dark-red);
+    --button-bg-hover: var(--dark-red-600);
+    --button-bg-active: var(--dark-red-700);
+    --button-bg-focus: var(--dark-red-700);
+    --button-text: var(--white);
+  }
+  .button--light-blue {
+    --button-bg: var(--light-blue);
+    --button-bg-hover: var(--light-blue-600);
+    --button-bg-active: var(--light-blue-700);
+    --button-bg-focus: var(--light-blue-700);
+    --button-text: var(--white);
+  }
+  .button--dark-blue {
+    --button-bg: var(--dark-blue);
+    --button-bg-hover: var(--dark-blue-600);
+    --button-bg-active: var(--dark-blue-700);
+    --button-bg-focus: var(--dark-blue-700);
+    --button-text: var(--white);
+  }
+  .button--green {
+    --button-bg: var(--green);
+    --button-bg-hover: var(--green-600);
+    --button-bg-active: var(--green-700);
+    --button-bg-focus: var(--green-700);
+    --button-text: var(--white);
+  }
+  .button--yellow {
+    --button-bg: var(--yellow);
+    --button-bg-hover: var(--yellow-600);
+    --button-bg-active: var(--yellow-700);
+    --button-bg-focus: var(--yellow-700);
+    --button-text: var(--black);
+  }
+  .button--accent {
+    --button-bg: var(--accent);
+    --button-bg-hover: var(--accent2);
+    --button-bg-active: var(--accent2);
+    --button-bg-focus: var(--accent2);
+    --button-text: var(--foreground);
+  }
+  .button--accent2 {
+    --button-bg: var(--accent2);
+    --button-bg-hover: var(--accent);
+    --button-bg-active: var(--accent);
+    --button-bg-focus: var(--accent);
+    --button-text: var(--foreground);
+  }
+
+
+  @media screen and (max-width: 30em) {
+    .button--full_mb {
+      display: block;
+      width: 100%;
+    }  
+  }
+
+  .button--disabled,
+  .button--disabled:disabled,
+  .button--disabled:hover,
+  .button--disabled:active,
+  .button--disabled:focus {
+    cursor: default;
+    pointer-events: none;
+    box-shadow: none;
+    background-color: var(--light-grey);
+    color: var(--grey);
+  }
+
+}

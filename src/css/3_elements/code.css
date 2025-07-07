@@ -1,0 +1,44 @@
+code,
+pre,
+kbd {
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  tab-size: 4;
+  hyphens: none;
+}
+pre {
+  overflow: auto;
+  max-width: 100%;
+  width:100%;
+}
+pre > code {
+  margin:0;
+}
+:not(pre) > code,
+kbd {
+  padding: 3px 4px 1px 4px;
+  font-size: 1em;
+}
+:not(pre) > code {
+  background: transparent;
+}
+@supports(--css: variables) {
+  code,
+  pre,
+  kbd {
+    font-family: var(--mono);
+    font-weight: 500;
+  }
+  code,
+  pre {
+    background: var(--off-bg);
+    color: var(--off-fg);
+  }
+  pre {
+    padding: var(--line);
+    margin-bottom: var(--line);
+  }
+}

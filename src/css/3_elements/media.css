@@ -1,0 +1,193 @@
+img,
+svg,
+picture {
+  max-width: 100%;
+  height: auto;
+}/*
+svg,
+img[src*=svg] { 
+  max-height: 100%; 
+}*/
+picture,
+figure {
+  position:relative;
+  margin: 0;
+}
+picture.c1 img,
+picture.full img,
+figure.c1 img,
+figure.full img{
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+}
+figure > img,
+figure > a > img,
+figure > iframe,
+picture > img,
+picture > a > img,
+picture > iframe {
+  display: block;
+  margin:0;
+  width: 100%;
+}
+picture {
+  margin:0;
+}
+audio {
+  max-width:100%;
+}
+.icon svg {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+}
+
+/* Let's target IE to respect aspect ratios and sizes for img tags containing SVG files
+// [1] IE9
+// [2] IE10+
+*/
+/* 1 */
+img[src*=svg] { width/*\**/: 100%\9;}
+/* 2 */
+@media screen and (min-width:0\0) {
+  img[src*=".svg"] {
+    width: 100%;
+  }
+  svg,
+  svg path {
+    width:100%;
+  }
+}
+
+figure .fluid-width-video-wrapper {
+  padding-top:56.5% !important;
+}
+
+@supports(--css: variables) {
+  figcaption,
+  figcaption p {
+    font-family: var(--sans);
+    font-size: var(--font-size-1);
+    line-height: var(--line-height-1);
+    padding-top: calc(var(--line) * 0.125);
+  }  
+  figcaption .source {
+    font-family: var(--grifo-s-italic);
+    display: block;
+    padding-top: calc(var(--line) * 0.125);
+  }
+  figcaption a {
+    border:none;
+  }
+  .content-block > figure.grid-column-full > figcaption {
+    padding-left: calc(var(--line) * 0.5);
+    padding-right: calc(var(--line) * 0.5);
+  }
+  .avatar--icon {
+    img,
+    svg {
+      max-height: var(--line);
+      max-width: var(--line);
+    }
+  }
+  .thumbnail {
+    max-width: calc(var(--line) * 6);
+  }
+  .grayscale {
+    filter: grayscale(96%) sepia(0.1);
+  }
+  .grayscale--hover {
+    img {
+      filter: grayscale(96%) sepia(0.1);
+      transition: 0.15s all linear;
+    }
+  }
+  .grayscale--hover:hover {
+    img {
+      filter:none;
+    }
+  }
+  .full {
+    figcaption {
+      padding-left: var(--line);
+      padding-right: var(--line);
+    }
+  }
+  .red-flags__icon {
+    width: calc(var(--line) * 2.66);
+    margin-top: calc(var(--line) * 0.9);
+    margin-left:2px;
+  }
+  .profile-photo {
+    max-width: 400px;
+  }
+
+  @media only screen and (min-width: 47.9em) {
+    .profile-photo {
+      max-width: none;
+    }
+    .img--right{
+      margin-bottom: calc(var(--line) * 0.5);
+      margin-left: calc(var(--line) * 0.5);
+      float: right;
+    }
+    .img--left{
+      margin-bottom: calc(var(--line) * 0.5);
+      margin-right: calc(var(--line) * 0.5);
+      float: left;
+    }
+    .img--center{
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: calc(var(--line) * 0.5);
+    }
+    .img--right-caption {
+      text-align: right;
+      float: right;
+    }
+    .caption--side-right,
+    .caption--side-left {
+      overflow: hidden;
+
+      img {
+        width: calc(var(--c4) * 3);
+      }
+
+      figcaption {
+        width: var(--c4);
+      }
+    }
+    .caption--side-right {
+      img {
+        float: left;
+      }
+      figcaption {
+        float: right;
+        padding-left: var(--line);
+      }
+    }
+    .caption--side-left {
+      img {
+        float: right;
+      }
+      figcaption {
+        float: left;
+        padding-right: var(--line);
+        text-align: right;
+      }
+    }
+    figcaption {
+      p {
+        float: left;
+      }
+      .source {
+        float: right;
+        text-align:  right;
+        width: var(--c3);
+      }
+    }
+  }
+}

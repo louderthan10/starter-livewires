@@ -1,5 +1,8 @@
 import { defineConfig } from 'vite'
 import path from 'path';
+import ViteRestart from 'vite-plugin-restart'
+import manifestSRI from 'vite-plugin-manifest-sri'
+import compression from 'vite-plugin-compression'
 
 // Load from .env
 const PRIMARY_SITE_URL = process.env.PRIMARY_SITE_URL || 'https://starter-livewires.ddev.site';
@@ -25,7 +28,20 @@ export default defineConfig({
             origin: /https?:\/\/([A-Za-z0-9\-\.]+)?(\.ddev\.site)(?::\d+)?$/,
         },
         watch: {
-            include: ['src/**/*', 'templates/**/*'],
+            include: ['src/**/*', 'templates/**/*.twig'],
+            usePolling: true
         },
-    }
+        hmr: {
+            host: siteUrl.hostname,
+            protocol: siteUrl.protocol.replace(':', ''),
+            port: 3000
+        }
+    },
+    plugins: [
+        ViteRestart({
+            reload: ['templates/**/*.twig', 'config/**/*.php']
+        }),
+        manifestSRI(),
+        compression()
+    ]
 });

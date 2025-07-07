@@ -1,0 +1,203 @@
+q {
+  quotes:"‘" "’" "“" "”";
+}
+q:before {
+  content:"‘";
+}
+q:after {
+  content:"’";
+}
+q q:before {
+  content:"“";
+}
+q q:after {
+  content:"”";
+}
+
+@supports(--css: variables) {
+  blockquote {
+    margin: var(--line) 0;
+    font-family: var(--heading);
+  }
+  blockquote {
+    p {
+      font-weight: var(--bold);
+      margin-bottom: 0;
+      hyphens: none;
+    }
+    cite {
+      font-style: normal;
+      font-family: var(--sans);
+    }
+    .source {
+      font-family: var(--sans);
+      font-size: var(--font-size-1);
+      line-height: var(--line-height-1);
+      letter-spacing: var(--letter-spacing-1);
+      font-weight: var(--bold);
+      margin-top: calc(var(--line) * 0.25);
+      color: var(--off-fg);
+
+      img {
+        max-width: calc(var(--line) * 1.75);
+      }
+      small {
+        font-size: 1em;
+        font-weight: var(--regular);
+      }
+    }
+  }
+
+  .quote {
+    border-left: calc(var(--line) * 0.25) solid var(--off-bg);
+    padding-left: calc(var(--line) * 0.5);
+    padding-bottom: calc(var(--line) * 0.25);
+
+    p {
+      position: relative;
+    }
+  }
+
+  .quote--large {
+    p {
+      font-size: var(--font-size-7);
+      line-height: var(--line-height-7);
+      letter-spacing: var(--letter-spacing-7);
+      margin-bottom: calc(var(--line) * 1.5);
+      display: block;
+      
+    }
+    .source {
+      text-transform: none;
+      font-size: var(--font-size-2);
+      line-height: var(--line-height-2);
+      letter-spacing: var(--letter-spacing-2);
+
+      a,
+      img {
+        display:block;
+      }
+      img {
+        float:left;
+        margin-right: calc(var(--line) * 0.5);
+        max-width: calc(var(--line) * 2);
+        margin-top: calc(var(--line) * 0.275);
+      }
+      &:before {
+        content: "";
+      }
+      &:after {
+        content: "";
+      }
+    }
+  }
+  .pull-quote {
+    margin-top:0;
+    p {
+      font-size: var(--font-size-4);
+      line-height: var(--line-height-4);
+      letter-spacing: var(--letter-spacing-4);
+      display: block;
+      margin-bottom: calc(var(--line) * 1.5);
+      max-width: none;
+    }
+    .source {
+      text-align:right;
+      float:right;
+
+      &:before,
+      &:after {
+        content:"";
+      }
+    }
+  }
+  .pull-quote.hang-right,
+  .pull-quote.hang-left {
+    display:none;
+  }
+
+  .testimonial,
+  .testimonial--featured {
+    quotes:"“" "”";
+    padding: var(--line) 0;
+
+    p {
+      font-size: var(--font-size-4);
+      line-height: var(--line-height-4);
+      letter-spacing: var(--letter-spacing-4);
+      display: block;
+      margin-bottom: var(--line);
+      max-width: none;
+    }
+    p:first-of-type {
+      text-indent: -0.41em;
+    }
+    p:first-of-type:before{
+      content:"“";
+    }
+    p:after{
+      content:"";
+    }
+    p:last-of-type:after{
+      content:"”";
+    }
+
+    q:before{
+      content:"‘";
+    }
+    q:after{
+      content:"’";
+    }
+
+    .source {
+      font-size: var(--font-size-1);
+      line-height: var(--line-height-1);
+      letter-spacing: var(--letter-spacing-1);
+      text-transform: none;
+      display: block;
+      letter-spacing: 0;
+      font-family: var(--sans);
+
+      img {
+        float:left;
+        margin-right: calc(var(--line) * 0.5);
+      }
+      small,
+      small a {
+        display:block;
+      }
+    }
+    cite {
+      font-style: italic;
+    }
+    .source:before,
+    .source:after {
+      content:"";
+    }
+  }
+  .testimonial--featured {
+    p {
+      font-size: var(--font-size-5);
+      line-height: var(--line-height-5);
+      letter-spacing: var(--letter-spacing-5);
+    }
+    .source {
+      font-size: var(--font-size-2);
+      line-height: var(--line-height-2);
+      letter-spacing: var(--letter-spacing-2);
+
+      img {
+        max-width: calc(var(--line) * 2);
+        margin-top: calc(var(--line) * 0.15);
+      }
+    }
+  }
+
+  @media only screen and (min-width: 47.9em) {
+    .pull-quote.hang-right,
+    .pull-quote.hang-left {
+      display:block;
+      margin-top: calc(var(--line) * 0.333);
+    }
+  }
+}

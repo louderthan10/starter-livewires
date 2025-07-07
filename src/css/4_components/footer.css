@@ -1,0 +1,53 @@
+.footer .email svg{
+  margin-top:3px;
+  height: 0.9em;
+  width: 0.9em;
+  margin-right:0.33em;
+}
+
+@supports (--css: variables) {
+  .nav--footer {
+    a {
+      margin-bottom: calc(var(--line) * 0.25);
+    }
+  }
+  .social-networks__nav {
+    margin-top: var(--line);
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: flex-end;
+
+    a {
+      padding-top: calc(var(--line) * 1.25);
+      padding-bottom: var(--line);
+      padding-left: calc(var(--line) * 0.5);
+      padding-right: calc(var(--line) * 0.5);
+    }
+    svg {
+      width:var(--line);
+      height:var(--line);
+    }
+  }
+  .footer {
+    margin-bottom: calc(var(--line) * 3.72);
+  }
+  @media only screen and (min-width: 47.9em) {
+    .footer {
+      margin-bottom: 0;
+    }
+    .nav--footer {
+      margin-top: calc(var(--line) * 5);
+    }
+    .social-networks__nav {
+      margin-top: calc(var(--line) * -1);
+
+      a {
+        padding-top: calc(var(--line) * 1.25);
+        padding-bottom: calc(var(--line) * 0.5);
+        padding-left: calc(var(--line) * 0.25);
+        padding-right: calc(var(--line) * 0.25);
+      }
+    }
+  }
+}

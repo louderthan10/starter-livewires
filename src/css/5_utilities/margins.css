@@ -1,0 +1,80 @@
+@supports (--css: variables) {
+  .margins {
+    padding-left: var(--margin);
+    padding-right: var(--margin);
+    padding-top: var(--vspace);
+    padding-bottom: var(--vspace);
+  }
+  .margins-x {
+    padding-left: var(--margin);
+    padding-right: var(--margin); 
+  }
+  .margins-y {
+    padding-top: var(--vspace);
+    padding-bottom: var(--vspace);
+  }
+  .margins-top {
+    padding-top: var(--vspace);
+  }
+  .margins-bottom {
+    padding-bottom: var(--vspace);
+  }
+  .margins-left {
+    padding-left: var(--margin);
+  }
+  .margins-right {
+    padding-right: var(--margin);
+  }
+  .margins-x-snug {
+  padding-left: var(--gutter); 
+  padding-right: var(--gutter); 
+  }
+  .margins-top-snug {
+    padding-top: var(--line);
+  }
+  .margins-bottom-snug {
+    padding-bottom: var(--line);
+  }
+  .margins-y-snug {
+    padding-top: var(--line);
+    padding-bottom: var(--line);
+  }
+  .margins-y-loose {
+    padding-top: calc(var(--vspace) * 1.5);
+    padding-bottom: calc(var(--vspace) * 1.5);
+  }
+  .margins-top-loose {
+    padding-top: calc(var(--vspace) * 1.5);
+  }
+  .margins-bottom-loose {
+    padding-bottom: calc(var(--vspace) * 1.5);
+  }
+
+  .mx-margin { margin-left: var(--page-margin); margin-right: var(--page-margin); }
+  .my-margin { margin-top: var(--page-margin); margin-bottom: var(--page-margin); }
+  .ml-margin { margin-left: var(--page-margin); }
+  .mr-margin { margin-right: var(--page-margin); }
+  .mt-margin { margin-top: var(--page-margin); }
+  .mb-margin { margin-bottom: var(--page-margin); }
+
+  .px-margin { padding-left: var(--page-margin); padding-right: var(--page-margin); }
+  .py-margin { padding-top: var(--page-margin); padding-bottom: var(--page-margin); }
+  .pl-margin { padding-left: var(--page-margin); }
+  .pr-margin { padding-right: var(--page-margin); }
+  .pt-margin { padding-top: var(--page-margin); }
+  .pb-margin { padding-bottom: var(--page-margin); }
+
+  @supports(padding: max(0px)) {
+    .margins,
+    .margins-x {
+      padding-left: max(var(--margin), env(safe-area-inset-left));
+      padding-right: max(var(--margin), env(safe-area-inset-right));
+    }
+    .margins-left {
+      padding-left: max(var(--margin), env(safe-area-inset-left));
+    }
+    .margins-right {
+      padding-right: max(var(--margin), env(safe-area-inset-right));
+    }
+  }
+}

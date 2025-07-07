@@ -1,0 +1,202 @@
+@supports(--css: variables) {
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: var(--line);
+  }
+  th,
+  td {
+    padding-top: calc(var(--line) / 1.9);
+    padding-bottom: calc(var(--line) / 2.1);
+    padding-left: calc(var(--line) / 2);
+    padding-right: calc(var(--line) / 2);
+    text-align: left;
+    vertical-align: top;
+  }
+  thead,
+  tfoot {
+    th,
+    td,
+    th,
+    td {
+      vertical-align: bottom;
+    }  
+  }
+  [colspan="1"]{
+    text-align: left;
+  }
+  [rowspan]{
+    vertical-align: middle;
+  }
+  [rowspan="1"]{
+    vertical-align: top;
+  }
+  table {
+    ul,
+    ol,
+    dl,
+    p {
+      margin-bottom: 0;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  th {
+    font-weight: var(--semibold);
+    color: var(--off-fg);
+  }
+  /* Bordered tables */
+  .table--bordered {
+    th,
+    td {
+      border: 1px solid var(--foreground);
+      
+      &:empty{
+        border:none;
+      }
+    }
+  }
+
+  /* Lined tables */
+  .table--lined thead tr {
+    border-bottom: 1px solid var(--foreground);
+  }
+  .table--lined tbody tr {
+    border-bottom: 1px solid var(--accent2);
+  }
+  .table--lined tfoot th,
+  .table--lined tfoot td {
+    padding-top: calc(var(--line) * 2);
+    padding-bottom: 0;
+  }
+  .table--lined th:first-child,
+  .table--lined td:first-child {
+    padding-left: 0;
+  }
+  .table--lined th:last-child,
+  .table--lined td:last-child {
+    padding-right: 0;
+  }
+
+  /* Striped tables */
+  .table--striped tbody tr:nth-of-type(odd) {
+    background-color: var(--off-bg);
+  }
+
+  .table--tight {
+    th,
+    td {
+      font-size: var(--font-size-1);
+      line-height: var(--line-height-1);
+      padding-top: calc(var(--line) * 0.25);
+      padding-bottom: calc(var(--line) * 0.25);
+      padding-left: calc(var(--line) * 0.5);
+      padding-right: calc(var(--line) * 0.5);
+    }
+    img {
+      max-width: var(--line);
+    }
+  }
+  .table--tight.table--lined {
+    th,
+    td {
+      padding-left:0;
+      padding-right:0;
+    }
+  }
+
+  td.price {
+    text-align:right;
+  }
+
+  @media only screen and (max-width: 64em) {
+    .table--scroll {
+      position: relative;    
+      max-width: 100%;
+      overflow: hidden;      
+    }
+    .table--scroll .table-wrap {
+      width:100%;
+      overflow:auto;
+    }
+    .table--scroll table {
+      width: 100%;
+      margin: auto;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-left: 120px;
+    }
+    .table--scroll td,
+    .table--scroll th {
+      min-width: 150px;
+      height: 100%;
+      background: var(--background);
+    }
+
+    .table--scroll th:first-child,
+    .table--scroll td:first-child {
+      position: absolute;
+      left: 0;
+      min-width: 120px;
+      width: 120px;
+      top: auto;
+    }
+  }
+  @media only screen and (max-width: 47.9em) {
+
+    .table--mobile tr {
+      width:100%;
+      padding-top: calc(var(--line) / 4);
+      padding-bottom: calc(var(--line) / 2);
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .table--mobile tbody,
+    .table--mobile tfoot,
+    .table--mobile tbody th,
+    .table--mobile tbody td,
+    .table--mobile tbody tr {
+      display: block !important;
+      padding-left:0;
+      padding-right: 0;
+    }
+    .table--mobile thead {
+      display: none;
+    }
+    .table--mobile thead,
+    .table--mobile tfoot,
+    .table--mobile tbody,
+    .table--mobile tr {
+      clear:both;
+    }
+    .table--mobile td,
+    .table--mobile th {
+      padding-top: calc(var(--line) / 8);
+      padding-bottom: calc(var(--line) / 8);
+      padding-left: calc(var(--line) / 2);
+      padding-right: calc(var(--line) / 2);
+    }
+    .table--mobile [data-th]::before {
+      content: attr(data-th);
+      display: block;
+      font-weight: var(--semibold);
+      margin-top: calc(var(--line) * 1);
+    }
+    .table--bordered.table--mobile td {
+      border-top: none;
+    }
+    .table--mobile {
+      .numeric,
+      .numerical,
+      .delete,
+      td.price {
+        text-align: left;
+      }    
+    }
+    td.numerical,
+    td.numeric {
+      text-transform: uppercase;
+    }
+  }
+}

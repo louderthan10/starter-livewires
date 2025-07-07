@@ -1,0 +1,56 @@
+@supports(--css: variables) {
+  .dropcap {
+   font-size: 5.2em;
+    line-height: 0.8;
+    float: left;
+    margin-right: 0.075em;
+    color: var(--off-fg);
+    font-family: var(--heading);
+    font-weight: var(--semibold);
+  }
+  .font-size-4,
+  .lead {
+    .dropcap {
+      font-size: 4.7em;
+    }
+  }
+
+  @media only screen and (min-width: 47.9em) {
+    .dropcap--m,
+    .dropcap--l {
+      font-size: 7.2em;
+      line-height: 0.75;
+      margin-right: 0.06em;
+    }
+    .font-size-4,
+    .lead {
+      .dropcap {
+        font-size: 4.9em;
+        line-height: 0.7;
+      }
+      .dropcap--m,
+      .dropcap--l {
+        font-size: 6.4em;
+        line-height: 0.74;
+      }
+    }
+  }
+  @media only screen and (min-width: 98em) {
+    .dropcap {
+      font-size: 5.3em;
+    }
+    .dropcap--m {
+      font-size: 7.5em;
+    }
+    .dropcap--l {
+      font-size: 11.4em;
+      margin-right: 0.025em;
+    }
+    .font-size-4,
+    .lead {
+      .dropcap--l {
+        font-size:11.1em;
+      }
+    }
+  }
+}
